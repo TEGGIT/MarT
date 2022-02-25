@@ -27,11 +27,43 @@
   margin-top: 3.563rem;
   display: flex;
   justify-content: center;
-  font-size: 6rem;
+  font-size: 4em;
   color: #FFFFFF;
 }
 .main__section__contentTop__present__text_green {
   color: #83B888;
+}
+.main__section__content {
+  margin-top: 7.188rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main__section__content__container {
+  width: 100%;
+  max-width: 75rem;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.main__section__content__container__text {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.main__section__content__container__text_top {
+  font-size: 48px;
+}
+.main__section__content__container__text_top_color {
+  color: #83B888;
+}
+.main__section__content__container__text_main {
+  font-size: 31px;
+}
+.main__section__content__image {
+  display: flex;
+  flex-direction: column;
+  gap: 4.125rem;
 }
 
 /*# sourceMappingURL=MainContent.module.css.map */
