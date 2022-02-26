@@ -1,13 +1,29 @@
 .footer{
   background-color: #131313;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: 6.563rem;
+  flex: 0 0 auto;
+
 
 
   &__nav{
     width: 100%;
     max-width: 77.563rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    &__logo{
+
+
+    }
+    &__text{
+      font-size: 0.875rem;
+      color: rgba(196, 196, 196, 0.5);
+
+    }
   }
 }
