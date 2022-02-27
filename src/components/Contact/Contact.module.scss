@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.contact_info {
+  height: 100%;
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: 56rem;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 64px;
+
+  }
+
+  &__contact {
+    font-size: 2.1875rem;
+    line-height: 3rem;
+    display: flex;
+    gap: 18px;
+    color: white;
+  }
+}
