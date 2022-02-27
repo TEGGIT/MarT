@@ -6,8 +6,12 @@ import star from "../../assets/star.svg"
 import image1 from "../../assets/mainImage1.png"
 import image2 from "../../assets/mainImage2.png"
 import image3 from "../../assets/mainImage3.png"
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 const MainContent = () => {
   return (
+      <>
+        <Header/>
       <main className={classes.main}>
         <section className={classes.main__section}>
           <div className={classes.main__section__contentTop} style={{backgroundImage: `url(${mainFon})`}}>
@@ -60,6 +64,9 @@ const MainContent = () => {
           </div>
         </section>
       </main>
+        <Footer/>
+
+      </>
   );
 };
 
