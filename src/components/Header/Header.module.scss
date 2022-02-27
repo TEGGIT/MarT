@@ -13,6 +13,11 @@
     display: flex;
     justify-content: space-between;
 
+    &_link{
+      text-decoration: none;
+      color: white;
+    }
+
 
     &__btns__container {
       color: #FFFFFF;
