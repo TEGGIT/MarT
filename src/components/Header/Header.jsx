@@ -14,18 +14,22 @@ const Header = () => {
       <img src={logo} alt={logo}/>
          </NavLink>
          <div className={classes.header__nav__btns__container}>
+
            <div className={classes.header__nav__btns__container_gap}>
             <img src={iconN} alt="номера"/>
            <p>
              Номера
            </p>
          </div>
+
+             <NavLink to="/sosi" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
            <img src={iconA} alt="Услуги"/>
            <p>
              Услуги
            </p>
            </div>
+             </NavLink>
            <NavLink to="/contact-page" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
            <img src={iconP} alt="Контакты"/>
