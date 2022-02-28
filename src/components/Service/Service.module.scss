@@ -1,7 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
 .serviceBack {
   height: 43rem;
@@ -18,26 +14,29 @@
     border-radius: 100px 23px;
     background: rgba(136, 136, 136, 0.5);
     width: 37.5rem;
-    height: 12.5rem;
   }
 }
 
 .content {
-  max-width: 100%;
+  width: 100%;
   margin-top: 100px;
+  display: flex;
+  justify-content: center;
+
 
   &_info {
-    max-width: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 
     &__conteiner {
+      width: 800px;
       gap: 60px;
       display: flex;
       justify-content: center;
       color: white;
       margin-bottom: 120px;
+
 
       &_revers {
         gap: 40px;
@@ -46,7 +45,6 @@
       }
 
       &_text {
-        width: 20rem;
         font-size: 1.875rem;
       }
 
@@ -58,9 +56,6 @@
 
     }
 
-    &__conteiner img {
-      height: 340px;
-    }
   }
 
 }
