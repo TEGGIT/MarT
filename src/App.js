@@ -22,6 +22,7 @@ function App() {
                     <Route path="/info-page" element={<InfoPage/>}/>
 
 
+
                 </Routes>
             </BrowserRouter>
         </div>

@@ -116,6 +116,37 @@
               color: #000000;
 
 
+
+            &__text_top {
+              font-size: 36px;
+              line-height: 45px;
+              padding: 16px 0 0 0;
+              color: #000000;
+
+
+            }
+
+            &__text {
+              font-size: 20px;
+              display: flex;
+              align-items: center;
+              gap: 14px;
+              color: #000000;
+
+
+            }
+
+            &__status {
+              display: flex;
+              justify-content: flex-end;
+              gap: 20px;
+
+              & p {
+                background: rgba(88, 85, 85, 0.4);
+                color: black;
+                font-size: 20px;
+                padding: 5px;
+
             }
 
             &__text {
@@ -141,6 +172,8 @@
 
               }
 
+              }
+
               &_color {
                 color: #83B888;
               }
@@ -163,6 +196,7 @@
           & p{
             color: white;
           }
+
         }
 
       }
