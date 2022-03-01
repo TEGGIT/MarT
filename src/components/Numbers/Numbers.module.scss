@@ -1,0 +1,22 @@
+.main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    &__contentTop{
+      width: 100%;
+      height: 40.125rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}

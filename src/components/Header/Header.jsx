@@ -14,14 +14,17 @@ const Header = () => {
       <img src={logo} alt={logo}/>
          </NavLink>
          <div className={classes.header__nav__btns__container}>
-
+           <NavLink to="/numbers-page" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
+
             <img src={iconN} alt="номера"/>
            <p>
              Номера
            </p>
-         </div>
 
+
+         </div>
+         </NavLink>
              <NavLink to="/sosi" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
            <img src={iconA} alt="Услуги"/>
