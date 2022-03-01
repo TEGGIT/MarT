@@ -125,7 +125,7 @@ const Numbers = () => {
 
 
                     <div className={classes.main__section__content__container__card__info__status}>
-                      <p>30.000₽/cутки</p>
+                      <p>30.000₽/сутки</p>
                       <p><span
                           className={classes.main__section__content__container__card__info__status_color}>СВОБОДНО</span>
                       </p>
