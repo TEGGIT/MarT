@@ -59,11 +59,11 @@
               align-items: center;
               transition: 0.3s;
 
-            &:hover{
+              &:hover {
 
-              background: rgba(236, 236, 236, 0.4);
-              color: black
-            }
+                background: rgba(236, 236, 236, 0.4);
+                color: black
+              }
             }
           }
         }
@@ -71,13 +71,14 @@
 
 
     }
-    &__content{
+
+    &__content {
       display: flex;
       justify-content: center;
       width: 100%;
 
 
-      &__container{
+      &__container {
         margin-top: 8.75rem;
         color: white;
         max-width: 80rem;
@@ -85,33 +86,80 @@
         flex-direction: column;
         align-content: center;
 
-        &__card{
+        &__card {
           background: #B8B8B8;
           box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.25);
-          border-radius: 53px;
+          border-top-left-radius: 53px;
+          border-top-right-radius: 53px;
           display: flex;
           gap: 4.188rem;
           width: 80rem;
 
-
-         &__info{
-         display: flex;
-           flex-direction: column;
-
-          &__text_top{
-            font-size: 36px;
-            line-height: 45px;
-            padding: 16px 0 0 0;
-            color: #000000;
-            margin-bottom: 33px;
-
-
+          &__image {
+            display: flex;
+            border-radius: 51px 51px 0 0;
 
           }
-         }
+
+          &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            padding: 0 16px 0 0;
+
+
+            &__text_top {
+              font-size: 36px;
+              line-height: 45px;
+              padding: 16px 0 0 0;
+              color: #000000;
+
+
+            }
+
+            &__text {
+              font-size: 20px;
+              display: flex;
+              align-items: center;
+              gap: 14px;
+              color: #000000;
+
+
+            }
+
+            &__status {
+              display: flex;
+              justify-content: flex-end;
+              gap: 20px;
+
+              & p {
+                background: rgba(88, 85, 85, 0.4);
+                color: black;
+                font-size: 20px;
+                padding: 5px;
+
+              }
+
+              &_color {
+                color: #83B888;
+              }
+
+            }
+          }
         }
 
-
+        &__bottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #222222;
+          box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.25);
+          border-radius: 0 0 53px 53px;
+          width: 1280px;
+          font-size: 36px;
+          padding: 12px;
+        }
 
       }
     }
