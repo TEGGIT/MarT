@@ -19,6 +19,7 @@ function App() {
                     <Route path="/sosi" element={<Service/>}/>
                     <Route path="/numbers-page" element={<Numbers/>}/>
 
+
                 </Routes>
             </BrowserRouter>
         </div>
