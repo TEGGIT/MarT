@@ -13,9 +13,28 @@
     display: flex;
     justify-content: space-between;
 
-    &_link{
+    &_link {
       text-decoration: none;
       color: white;
+      position: relative;
+    }
+
+    &_link:hover:before {
+      transform: scaleX(1);
+      transition: 0.5s;
+    }
+
+    &_link:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      border-radius: 1px;
+      bottom: -10px;
+      background-color: white;
+      position: absolute;
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: 0.5s;
     }
 
 
@@ -31,7 +50,6 @@
 
         gap: 1.063rem;
       }
-
 
 
     }
