@@ -4,9 +4,10 @@ import logo from "../../assets/MarT.svg"
 import iconN from "../../assets/nomera.svg"
 import iconA from "../../assets/Uslugi.svg"
 import iconP from "../../assets/Phone.svg"
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
+
   return (
       <header className={classes.header}>
        <nav className={classes.header__nav}>
@@ -14,14 +15,17 @@ const Header = () => {
       <img src={logo} alt={logo}/>
          </NavLink>
          <div className={classes.header__nav__btns__container}>
-
+           <NavLink to="/numbers-page" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
+
             <img src={iconN} alt="номера"/>
            <p>
              Номера
            </p>
-         </div>
 
+
+         </div>
+         </NavLink>
              <NavLink to="/sosi" className={classes.header__nav_link}>
            <div className={classes.header__nav__btns__container_gap}>
            <img src={iconA} alt="Услуги"/>
@@ -37,12 +41,12 @@ const Header = () => {
              Контакты
            </p>
 
-           </div>
-           </NavLink>
-         </div>
-       </nav>
-      </header>
-  );
+                        </div>
+                    </NavLink>
+                </div>
+            </nav>
+        </header>
+    );
 };
 
 export default Header;
