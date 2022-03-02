@@ -8,8 +8,6 @@ import iconOne from "../../assets/IconNumbers1.svg"
 import iconTwo from "../../assets/iconNumbers2.svg"
 import iconThree from "../../assets/iconNumbers3.svg"
 import iconFour from "../../assets/iconNumbers4.svg"
-import {NavLink} from "react-router-dom";
-
 
 const Numbers = () => {
   return (
@@ -48,7 +46,6 @@ const Numbers = () => {
                         Семейный номер
                       </p>
 
-
                     </div>
                     <div className={classes.main__section__content__container__card__info__text}>
 
@@ -70,7 +67,7 @@ const Numbers = () => {
                     </div>
                     <div className={classes.main__section__content__container__card__info__text}>
 
-                      <img src={iconThree} alt="Иконка"/>
+                      <img src={iconThree} alt="Иконкa"/>
                       <p>
                         Тип питания определяется в зависимости от тарифа
                       </p>
@@ -85,44 +82,6 @@ const Numbers = () => {
 
 
                     </div>
-
-                    </div>
-                    <div className={classes.main__section__content__container__card__info__text}>
-
-                      <img src={iconOne} alt="Иконка"/>
-                      <p>
-                        175 м2
-                      </p>
-
-
-                    </div>
-                    <div className={classes.main__section__content__container__card__info__text}>
-
-                      <img src={iconTwo} alt="Иконка"/>
-                      <p>
-                        До 6‑ти человек (также можно разместить до 3‑х детей до 3‑х лет включительно)
-                      </p>
-
-
-                    </div>
-                    <div className={classes.main__section__content__container__card__info__text}>
-
-                      <img src={iconThree} alt="Иконка"/>
-                      <p>
-                        Тип питания определяется в зависимости от тарифа
-                      </p>
-
-
-                    </div>
-                    <div className={classes.main__section__content__container__card__info__text}>
-
-                      <img src={iconFour} alt="Иконка"/>
-                      <p>
-                        Возможно проживание с животными весом не более 5 кг за дополнительную плату </p>
-
-
-                    </div>
-
 
                     <div className={classes.main__section__content__container__card__info__status}>
                       <p>30.000₽/сутки</p>
@@ -134,17 +93,9 @@ const Numbers = () => {
                   </div>
                 </div>
                 <div className={classes.main__section__content__container__bottom}>
-
-                  <NavLink to="/info-page" style={{textDecoration:"none"}}>
                   <p>
                     Подробнее
                   </p>
-                  </NavLink>
-
-                  <p>
-                    Подробнее
-                  </p>
-
                 </div>
               </div>
             </div>
