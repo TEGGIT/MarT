@@ -41,9 +41,9 @@ const Numbers = () => {
                           info={numbers.info}
                           food={numbers.food}
                       />
-                  );
+                  )
                 })}
-            </div>
+              </div>
             </div>
           </section>
         </main>
