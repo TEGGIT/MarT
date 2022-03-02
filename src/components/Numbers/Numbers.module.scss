@@ -166,7 +166,11 @@
             text-decoration: none;
           }
         }
-
+      }
+      &__cardHostel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
