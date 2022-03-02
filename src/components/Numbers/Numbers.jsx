@@ -107,7 +107,7 @@ const Numbers = () => {
                     </div>
                     <div className={classes.main__section__content__container__card__info__text}>
 
-                      <img src={iconThree} alt="Иконка"/>
+                      <img src={iconThree} alt="Иконкa"/>
                       <p>
                         Тип питания определяется в зависимости от тарифа
                       </p>
