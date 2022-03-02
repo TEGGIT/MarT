@@ -142,31 +142,42 @@
               }
 
               &_color {
-                color: #83B888;
+                color: #00ff18;
               }
 
             }
           }
         }
 
+
+
         &__bottom {
           display: flex;
           justify-content: center;
           align-items: center;
           background: #222222;
-          box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.25);
           border-radius: 0 0 53px 53px;
           width: 1280px;
+          text-decoration: none;
+          color: white;
           font-size: 36px;
           padding: 12px;
 
+          &:hover {
+            background-color: #4e4d4d;
+            transition: 0.5s;
+          }
 
           &_link{
             color: white;
             text-decoration: none;
           }
         }
-
+      }
+      &__cardHostel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
