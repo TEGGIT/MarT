@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import mainImage from "../../assets/BackNumbers.png"
 import CardHostel from "../CardHostel/CardHostel";
+import catalog from "../../mockdata/CatalogData"
 
 const Numbers = () => {
   return (
@@ -29,8 +30,19 @@ const Numbers = () => {
             </div>
             <div className={classes.main__section__content}>
               <div className={classes.main__section__content__cardHostel}>
-
-                <CardHostel/>
+                {catalog.map((numbers) => {
+                  return (
+                      <CardHostel
+                          image={numbers.image}
+                          category={numbers.category}
+                          size={numbers.size}
+                          price={numbers.price}
+                          places={numbers.places}
+                          info={numbers.info}
+                          food={numbers.food}
+                      />
+                  );
+                })}
             </div>
             </div>
           </section>
