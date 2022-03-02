@@ -79,6 +79,8 @@ const CardHostel = () => {
       </NavLink>
 
 </div>
+
+          
       </>
   );
 };
