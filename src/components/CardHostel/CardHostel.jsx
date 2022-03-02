@@ -70,14 +70,15 @@ const CardHostel = () => {
 
             </div>
           </div>
-          <div className={classes.main__section__content__container__bottom}>
-            <NavLink to="/info-page" className={classes.main__section__content__container__bottom_link}>
+          <NavLink to="/info-page" className={classes.main__section__content__container__bottom}>
+
               <p>
                 Подробнее
               </p>
-            </NavLink>
-          </div>
-        </div>
+
+      </NavLink>
+
+</div>
       </>
   );
 };
