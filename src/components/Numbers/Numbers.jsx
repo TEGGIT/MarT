@@ -8,6 +8,7 @@ import iconOne from "../../assets/IconNumbers1.svg"
 import iconTwo from "../../assets/iconNumbers2.svg"
 import iconThree from "../../assets/iconNumbers3.svg"
 import iconFour from "../../assets/iconNumbers4.svg"
+import {NavLink} from "react-router-dom";
 
 const Numbers = () => {
   return (
@@ -93,9 +94,11 @@ const Numbers = () => {
                   </div>
                 </div>
                 <div className={classes.main__section__content__container__bottom}>
+                  <NavLink to="/info-page" className={classes.main__section__content__container__bottom_link}>
                   <p>
                     Подробнее
                   </p>
+                  </NavLink>
                 </div>
               </div>
             </div>
