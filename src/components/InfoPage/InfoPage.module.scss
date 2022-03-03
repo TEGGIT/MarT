@@ -1,6 +1,110 @@
-.test{
+.more {
   color: white;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: #1A1A1A;
+}
 
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &__text {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.container {
+  max-width: 100%;
+  width: 80%;
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    border-radius: 25px;
+    margin-top: 110px;
+    padding: 30px;
+    gap: 30px;
+    margin-bottom: 90px;
+
+    &_info:last-child {
+      font-size: 1rem;
+    }
+
+    &_info {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+
+      &_line {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.41);
+      }
+    }
+  }
+
+  &__reservationCard {
+    max-width: 100%;
+    width: 50%;
+    height: 80%;
+    margin-top: 110px;
+
+
+    &_info {
+      background-color: #282828;
+      margin-top: -6px;
+      border-radius: 0 0 20px 20px;
+
+      &_btn:hover {
+        background-color: rgba(157, 157, 157, 0.72);
+        transition: 0.5s;
+      }
+
+      &_btn {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        background-color: #585858;
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
+      }
+
+
+      &__description {
+        display: flex;
+        align-items: center;
+        font-size: 0.875rem;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      &_price {
+        padding: 2.5rem;
+        font-size: 40px;
+      }
+    }
+
+    &__description {
+      margin-top: 50px;
+
+
+      &__title {
+        font-size: 1.875rem;
+      }
+
+      &_text {
+        margin-top: 30px;
+        border-left: 3px solid white;
+        padding-left: 20px;
+        font-size: 1.25rem;
+      }
+    }
+  }
 }

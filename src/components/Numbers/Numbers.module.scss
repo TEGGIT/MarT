@@ -150,7 +150,6 @@
         }
 
 
-
         &__bottom {
           display: flex;
           justify-content: center;
@@ -168,13 +167,14 @@
             transition: 0.5s;
           }
 
-          &_link{
+          &_link {
             color: white;
             text-decoration: none;
           }
         }
       }
-      &__cardHostel{
+
+      &__cardHostel {
         display: flex;
         flex-direction: column;
         align-items: center;
