@@ -79,7 +79,7 @@ const InfoPage = () => {
                         </div>
                         <div className={classes.container__description_info}>
                             <img src={WiFi} alt={'Wi-Fi'}/>
-                            <span>Высокоскоростной WI-FI</span>
+                            <span>Высокоскоростнoй WI-FI</span>
                         </div>
                         <div className={classes.container__description_info}>
                             <img src={IroningBoard} alt={'Гладильная доска'}/>
