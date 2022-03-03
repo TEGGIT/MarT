@@ -19,13 +19,14 @@
 
 .container {
   max-width: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
   gap: 70px;
   justify-content: center;
 
   &__description {
     display: flex;
+    background: no-repeat;
     flex-direction: column;
     border: 3px solid white;
     border-radius: 25px;
@@ -51,10 +52,10 @@
   }
 
   &__reservationCard {
-    max-width: 100%;
-    width: 50%;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
     margin-top: 110px;
+    width: 40%;
 
 
     &_info {

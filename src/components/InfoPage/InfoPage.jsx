@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./InfoPage.module.scss";
-import BackImgDescription from '../../assets/BackImgDescription .png'
+import BackImgDescription from '../../assets/BackImgDescription.png'
 import Cloud from '../../assets/Cloud.svg'
 import TV from '../../assets/TV.svg'
 import Lamp from '../../assets/TableLamp.svg'
@@ -38,8 +38,9 @@ const InfoPage = () => {
                     <p><NavLink to="/numbers-page" className={classes.nav__text}>Номера</NavLink> > Подробнее</p>
                 </div>
                 <div className={classes.container}>
+
                     <div className={classes.container__description}
-                         style={{background: `url(${BackImgDescription})`}}>
+                         style={{backgroundImage: `url(${BackImgDescription})`}}>
                         <div className={classes.container__description_info}>
                             <img src={Cloud} alt={'Иконка воздуха'}/>
                             <span>Центральная система кондиционирования</span>
