@@ -129,7 +129,7 @@ const InfoPage = () => {
                             </div>
                             <div className={classes.container__reservationCard_info__description}>
                                 <img src={User} alt={'Иконка людей'}/>
-                                <span>До 6‑ти человек (также можно разместить до 3‑х детей до 3‑х лет включительно)</span>
+                                <span>До 6‑ти человек (также можно разместить до 3‑х детей до 3‑х лет включительнo)</span>
                             </div>
                             <div className={classes.container__reservationCard_info__description}>
                                 <img src={Fork} alt={'Иконка людей'}/>
