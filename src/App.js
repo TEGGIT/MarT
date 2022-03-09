@@ -6,12 +6,14 @@ import {Route, Routes, BrowserRouter} from "react-router-dom";
 import Service from "./components/Service/Service";
 import Numbers from "./components/Numbers/Numbers";
 import InfoPage from "./components/InfoPage/InfoPage";
+import {Provider} from "react-redux";
+import {store} from "./store/store";
 
 
 function App() {
     return (
         <div className="App">
-
+            <Provider store={store} >
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<MainContent/>}/>
@@ -25,6 +27,7 @@ function App() {
 
                 </Routes>
             </BrowserRouter>
+            </Provider>
         </div>
     );
 }
