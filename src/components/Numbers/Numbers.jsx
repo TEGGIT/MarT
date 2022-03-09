@@ -4,9 +4,12 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import mainImage from "../../assets/BackNumbers.png"
 import CardHostel from "../CardHostel/CardHostel";
-import catalog from "../../mockdata/CatalogData"
+import {useSelector} from "react-redux";
 
 const Numbers = () => {
+  const catalog = useSelector((state) => state.catalogReducer)
+
+
   return (
       <>
         <Header/>
