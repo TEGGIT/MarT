@@ -6,8 +6,9 @@ import iconThree from "../../assets/iconNumbers3.svg";
 import iconFour from "../../assets/iconNumbers4.svg";
 import {NavLink} from "react-router-dom";
 
-const CardHostel = ({category, size, places,image,food,info,price}) => {
+const CardHostel = ({category, size, places,image,food,info,price,id}) => {
   return (
+
       <>
         <div className={classes.main__section__content__container}>
           <div className={classes.main__section__content__container__card}>
@@ -62,7 +63,7 @@ const CardHostel = ({category, size, places,image,food,info,price}) => {
               </div>
 
               <div className={classes.main__section__content__container__card__info__status}>
-                <p>{price}</p>
+                <p>{`${price}₽/сутки`}</p>
                 <p><span
                     className={classes.main__section__content__container__card__info__status_color}>СВОБОДНО</span>
                 </p>
@@ -70,7 +71,7 @@ const CardHostel = ({category, size, places,image,food,info,price}) => {
 
             </div>
           </div>
-          <NavLink to="/info-page" className={classes.main__section__content__container__bottom}>
+          <NavLink to={`/info-page#${id}`} className={classes.main__section__content__container__bottom}>
 
               <p>
                 Подробнее
