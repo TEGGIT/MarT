@@ -43,6 +43,7 @@ const Numbers = () => {
                           places={numbers.places}
                           info={numbers.info}
                           food={numbers.food}
+                          id={numbers.id}
                       />
                   )
                 })}

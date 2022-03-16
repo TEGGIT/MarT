@@ -24,19 +24,26 @@ import IconSquare from '../../assets/IconSquare.svg'
 import User from '../../assets/User.svg'
 import Fork from '../../assets/Fork.svg'
 import ExclamationMark from '../../assets/ExclamationMark.svg'
-
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import {NavLink} from "react-router-dom";
 import Modal from "../Modal/Modal";
+import {useLocation} from "react-router-dom";
+import catalog from "../../mockdata/CatalogData";
+
 
 const InfoPage = () => {
   const [openModal, setOpenModal] = useState(false)
+  const location = useLocation();
+  const numbers = catalog.find((numbers) => `#${numbers.id}` === location.hash);
+  console.log(numbers.id)
+
 
   return (
       <>
         <Header/>
         <main className={classes.more}>
+
           <div className={classes.nav}>
             <p><NavLink to="/numbers-page" className={classes.nav__text}>Номера</NavLink> > Подробнее</p>
           </div>
@@ -120,27 +127,28 @@ const InfoPage = () => {
               </div>
             </div>
             <div className={classes.container__reservationCard}>
-              <img src={ImgNumber} alt={'Картинка номера'}/>
+              <img src={numbers.image} alt={'Картинка номера'}/>
               <div className={classes.container__reservationCard_info}>
                 <div className={classes.container__reservationCard_info_price}>
-                  <span>30.000 </span>
+                  <span>{numbers.price} </span>
                   <span>₽/сутки</span>
                 </div>
                 <div className={classes.container__reservationCard_info__description}>
                   <img src={IconSquare} alt={'Иконка маштаба'}/>
-                  <span>175м<sup>2</sup></span>
+                  "/todo[пофикси*размер*номера]"
+                  <span>{numbers.size}</span>
                 </div>
                 <div className={classes.container__reservationCard_info__description}>
                   <img src={User} alt={'Иконка людей'}/>
-                  <span>До 6‑ти человек (также можно разместить до 3‑х детей до 3‑х лет включительнo)</span>
+                  <span>{numbers.places}</span>
                 </div>
                 <div className={classes.container__reservationCard_info__description}>
                   <img src={Fork} alt={'Иконка людей'}/>
-                  <span>Тип питания определяется в зависимости от тарифа</span>
+                  <span>{numbers.food}</span>
                 </div>
                 <div className={classes.container__reservationCard_info__description}>
                   <img src={ExclamationMark} alt={'Иконка людей'}/>
-                  <span>Возможно проживание с животными весом не более 5 кг за дополнительную плату</span>
+                  <span>{numbers.info}</span>
                 </div>
                 <button className={classes.container__reservationCard_info_btn} onClick={() => setOpenModal(true)}>
                   Бронировать
@@ -150,7 +158,9 @@ const InfoPage = () => {
                 <div className={classes.container__reservationCard__description__title}>
                   <h1>О номере</h1>
                 </div>
+
                 <div className={classes.container__reservationCard__description_text}>
+                  "/todo[либо*удаляй*либо*думай*описание*для*каждого*номера]"
                   В красивом интерьере Семейного люкса мы воплотили атмосферу домашнего уюта, сохранив
                   функциональность и комфорт премиального гостиничного номера. Современный дизайн спальни
                   и гостиной продуман в деталях — здесь все необходимое для общения и уединенного отдыха с
