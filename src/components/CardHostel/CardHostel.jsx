@@ -6,7 +6,7 @@ import iconThree from "../../assets/iconNumbers3.svg";
 import iconFour from "../../assets/iconNumbers4.svg";
 import {NavLink} from "react-router-dom";
 
-const CardHostel = ({category, size, places,image,food,info,price,id}) => {
+const CardHostel = ({category, size, places,image,food,info,price,id, }) => {
   return (
 
       <>

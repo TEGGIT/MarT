@@ -1,0 +1,18 @@
+.btn {
+  &_nav {
+    width: 280px;
+    height: 70px;
+    background: rgba(88, 85, 85, 0.4);
+    font-size: 20px;
+    border: 3px solid #232323;
+    border-radius: 30px;
+    color: white;
+  }
+  &_nav:hover {
+    color: black;
+    border: none;
+    background: #83B888;
+    transition: 0.5s;
+  }
+
+}
