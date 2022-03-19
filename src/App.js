@@ -10,7 +10,7 @@ import {Provider} from "react-redux";
 import {store} from "./store/store";
 
 
-function App() {
+function App(menuItem) {
     return (
         <div className="App">
             <Provider store={store} >

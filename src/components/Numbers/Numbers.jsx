@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from "./Numbers.module.scss"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import mainImage from "../../assets/BackNumbers.png"
 import CardHostel from "../CardHostel/CardHostel";
 import {useSelector} from "react-redux";
+import ButtonNav from "../UI/Nav/Nav";
 
 const Numbers = () => {
   const catalog = useSelector((state) => state.catalogReducer)
+
+  const [filteredCatalog, setFilteredCatalog] = useState(catalog)
+
+
+  const filtered = (e) => {
+    e.target.name === 'All' ? setFilteredCatalog(catalog)
+        :
+        setFilteredCatalog(catalog.filter((el) => el.filter === e.target.name))
+  }
 
 
   return (
@@ -22,18 +32,32 @@ const Numbers = () => {
                 </div>
 
                 <nav className={classes.main__section__contentTop__container__nav}>
-                  <ul>
-                    <li>All</li>
-                    <li>Family room</li>
-                    <li>Delux</li>
-                    <li>Presidential Suite</li>
-                  </ul>
+                    <ButtonNav
+                        name='All'
+                        onClick={(e) => filtered(e)}
+                        text='All'
+                    />
+                    <ButtonNav
+                        name='Family room'
+                        onClick={(e) => filtered(e)}
+                        text='Family room'
+                    />
+                    <ButtonNav
+                        name='Delux'
+                        onClick={(e) => filtered(e)}
+                        text='Delux'
+                    />
+                    <ButtonNav
+                        name='Presidential Suite'
+                        onClick={(e) => filtered(e)}
+                        text='Presidential Suite'
+                    />
                 </nav>
               </div>
             </div>
             <div className={classes.main__section__content}>
               <div className={classes.main__section__content__cardHostel}>
-                {catalog.map((numbers) => {
+                {filteredCatalog.map((numbers) => {
                   return (
                       <CardHostel
                           image={numbers.image}

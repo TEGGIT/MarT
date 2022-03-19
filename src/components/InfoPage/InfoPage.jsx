@@ -36,7 +36,6 @@ const InfoPage = () => {
   const [openModal, setOpenModal] = useState(false)
   const location = useLocation();
   const numbers = catalog.find((numbers) => `#${numbers.id}` === location.hash);
-  console.log(numbers.id)
 
 
   return (
@@ -135,7 +134,6 @@ const InfoPage = () => {
                 </div>
                 <div className={classes.container__reservationCard_info__description}>
                   <img src={IconSquare} alt={'Иконка маштаба'}/>
-                  "/todo[пофикси*размер*номера]"
                   <span>{numbers.size}</span>
                 </div>
                 <div className={classes.container__reservationCard_info__description}>

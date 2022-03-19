@@ -15,8 +15,10 @@
   &__card {
     padding: 2.75rem;
     border-radius: 1.25rem;
-    background-color: rgba(255, 255, 255, 0.39);
+    background: rgba(255, 255, 255, 0.39);
     backdrop-filter: blur(8px);
+    box-shadow:  -7px -7px 15px #4b4b4b,
+    7px 7px 15px #7b7b7b;
 
     &__form {
       max-width: 360px;

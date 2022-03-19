@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Button.module.scss'
 
-const Button = ({type, onClick}) => {
+const Button = ({type, onClick, text, name}) => {
   return (
 
       <div className={classes.btn} onClick={onClick}>
-        <button className={classes.btn_bron} type={type}>Бронировать</button>
+        <button className={classes.btn_bron} type={type} name={name}>{text}</button>
       </div>
   );
 };

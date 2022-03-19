@@ -23,6 +23,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price: '30.000',
     id: "BXD100BLK00",
+    filter: 'Family room',
 },
   {
     category: "Семейный номер room XI",
@@ -33,6 +34,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price:"20.000",
     id: "BXD100BLK01",
+    filter: 'Family room',
 
 
   },
@@ -45,6 +47,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price:"20.000",
     id: "BXD100BLK02",
+    filter: 'Family room',
 
 
   },
@@ -57,6 +60,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price:"30.000",
     id: "BXD100BLK03",
+    filter: 'Family room',
 
 
   },
@@ -69,6 +73,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price:"40.000",
     id: "BXD100BLK04",
+    filter: 'Family room',
 
 
   },
@@ -81,6 +86,7 @@ const  catalog = [
     info: "Для людей с ограниченными возможностями",
     price:"35.000",
     id: "BXD100BLK05",
+    filter: 'Delux',
 
 
   },
@@ -93,6 +99,7 @@ const  catalog = [
     info: "Замечательный вид на город",
     price:"50.000",
     id: "BXD100BLK06",
+    filter: 'Delux',
 
 
   },
@@ -105,6 +112,7 @@ const  catalog = [
     info: "Замечательный вид на город",
     price:"60.000",
     id: "BXD100BLK07",
+    filter: 'Delux',
 
 
   },
@@ -117,6 +125,7 @@ const  catalog = [
     info: "Возможно проживание с животными весом не более 5 кг за дополнительную плату",
     price:"80.000",
     id: "BXD100BLK08",
+    filter: 'Presidential Suite',
 
 
   },
@@ -129,6 +138,7 @@ const  catalog = [
     info: "Возможен вызов бесплатного персонала",
     price:"120.000",
     id: "BXD100BLK09",
+    filter: 'Presidential Suite',
 
 
   },
