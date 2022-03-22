@@ -26,30 +26,33 @@
 
   &__description {
     display: flex;
-    background: no-repeat;
+    background: no-repeat top;
     flex-direction: column;
-    border: 3px solid white;
     border-radius: 25px;
     margin-top: 110px;
     padding: 30px;
-    gap: 30px;
-    margin-bottom: 90px;
+    gap: 60px;
 
-    &_info:last-child {
-      font-size: 1rem;
+    &_text {
+      display: flex;
+      justify-content: center;
     }
+
 
     &_info {
       display: flex;
+      gap: 20px;
+      align-self: flex-start;
       align-items: center;
-      gap: 30px;
-
-
-      &_line {
-        border-bottom: 3px solid rgba(255, 255, 255, 0.41);
-      }
     }
+
+    &_line {
+      margin-top: 20px;
+      border-bottom: 3px solid #FFFFFF;
+    }
+
   }
+
 
   &__reservationCard {
     display: flex;
