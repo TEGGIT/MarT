@@ -22,19 +22,19 @@ const Contact = () => {
         <main className={classes.contact_info} style={{backgroundImage: `url(${BackImg})`}}>
           <div className={classes.wrapper}>
             <div className={classes.contact_info__contact}>
-              <img className={classes.contact_info__img} src={iconP}/>
+              <img src={iconP} alt={''}/>
               <p>89001373398 | 89287562664</p>
             </div>
             <div className={classes.contact_info__contact}>
-              <img className={classes.contact_info__img} src={iconM}/>
+              <img src={iconM} alt={''}/>
               <p>ymenya.netprav32@gmail.com</p>
             </div>
             <div className={classes.contact_info__contact}>
-              <img className={classes.contact_info__img} src={iconG}/>
+              <img src={iconG} alt={''}/>
               <p>Братский пер., 44 Ростов-на-Дону, Ростовская обл</p>
             </div>
             <div className={classes.contact_info__contact}>
-              <img className={classes.contact_info__img} src={iconT}/>
+              <img src={iconT} alt={''}/>
               <p>Прием гостей с 6:00-22:30</p>
             </div>
           </div>
