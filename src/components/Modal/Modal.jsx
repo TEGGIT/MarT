@@ -12,7 +12,7 @@ const Modal = ({setOpenModal}) => {
         <div className={classes.background__card} onClick={e => e.stopPropagation()}>
           <form className={classes.background__card__form}>
             <h2 className={classes.background__card_title}>Регистрация номера</h2>
-            <span>Номер комнаты: № <span></span> </span>
+            <span>Номер комнаты: № <span/> </span>
             <Input title="Дата и время прибытия:" name="datetime" type="datetime-local"/>
             <Input title="ФИО:" name="text" type="text" placeholder={'Введите ФИО'}/>
             <Input title="Паспорт, серия и номер:" name="number" type="number"

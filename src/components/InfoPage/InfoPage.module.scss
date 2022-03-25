@@ -9,7 +9,7 @@
 .nav {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 
   &__text {
     text-decoration: none;
@@ -18,96 +18,113 @@
 }
 
 .container {
-  max-width: 100%;
   width: 100%;
-  display: flex;
-  gap: 70px;
-  justify-content: center;
+  max-width: 75rem;
+  margin-top: 1.4375rem;
 
-  &__description {
+
+  &__hotelCard {
     display: flex;
-    background: no-repeat;
-    flex-direction: column;
-    border: 3px solid white;
-    border-radius: 25px;
-    margin-top: 110px;
-    padding: 30px;
-    gap: 30px;
-    margin-bottom: 90px;
+    border-radius: 1.5625rem;
+    background: #282828;
 
-    &_info:last-child {
-      font-size: 1rem;
+    &__bottomInfo {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      &_info {
+        display: flex;
+
+
+        &_price {
+          display: flex;
+          align-items: center;
+          padding: 0 1.25rem;
+          font-size: 1.5rem;
+
+        }
+
+        &_price span span {
+          color: #C9C9C9;
+        }
+
+        &_btn {
+          background: #585858;
+          border: none;
+          padding: 0.9375rem 5rem;
+          color: white;
+          font-size: 1.5rem;
+          border-radius: 1.5625rem 0;
+        }
+
+        &_btn:hover {
+          transition: 0.5s;
+          background: #b7b7b7;
+          color: black;
+        }
+      }
+
+
     }
+
 
     &_info {
       display: flex;
-      align-items: center;
-      gap: 30px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem 0 0 1.5rem;
 
 
-      &_line {
-        border-bottom: 3px solid rgba(255, 255, 255, 0.41);
+      &_text {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
       }
+
+
     }
   }
 
-  &__reservationCard {
-    display: flex;
-    flex-direction: column;
-    margin-top: 110px;
-    width: 40%;
-
+  &__options {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding: 10px 20px 20px 20px;
+    margin: 20px 0 20px;
+    max-height: 360px;
 
     &_info {
-      background-color: #282828;
-      margin-top: -6px;
-      border-radius: 0 0 20px 20px;
-
-      &_btn:hover {
-        background-color: rgba(157, 157, 157, 0.72);
-        transition: 0.5s;
-      }
-
-      &_btn {
-        width: 100%;
-        border: none;
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        background-color: #585858;
-        border-radius: 0 0 20px 20px;
-        padding: 20px;
-      }
-
-
-      &__description {
-        display: flex;
-        align-items: center;
-        font-size: 1.25rem;
-        gap: 20px;
-        padding: 20px;
-      }
-
-      &_price {
-        padding: 2.5rem;
-        font-size: 40px;
-      }
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 30px;
+      height: 200px;
     }
 
-    &__description {
-      margin-top: 50px;
 
+    &_title {
+      display: flex;
+      font-size: 24px;
+      padding: 10px 0 30px 10px;
+    }
 
-      &__title {
-        font-size: 1.875rem;
+    &__block {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      max-height: 300px;
+      gap: 24px;
+
+      &_btn {
+        background: none;
+        border: none;
       }
 
-      &_text {
-        margin-top: 30px;
-        border-left: 3px solid white;
-        padding-left: 20px;
-        font-size: 1.25rem;
+      &_btn:focus {
+        outline: none;
       }
     }
   }
 }
+
