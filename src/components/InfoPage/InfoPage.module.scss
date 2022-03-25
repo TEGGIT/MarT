@@ -115,16 +115,19 @@
       flex-wrap: wrap;
       max-height: 300px;
       gap: 24px;
+      cursor: default;
 
-      &_btn {
-        background: none;
-        border: none;
+      &_green {
+        color: green;
       }
 
-      &_btn:focus {
-        outline: none;
+      &_hidden {
+        opacity: 0;
       }
+
     }
   }
 }
+
+
 

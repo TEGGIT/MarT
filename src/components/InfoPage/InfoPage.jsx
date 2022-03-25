@@ -20,22 +20,19 @@ import catalog from "../../mockdata/CatalogData";
 import Tick from '../../assets/Tick.svg'
 
 
-
 const InfoPage = () => {
   const [openModal, setOpenModal] = useState(false)
-  const [showTick, setShowTick] = useState(false)
+  const [showTick, setShowTick] = useState('')
 
-  let content = <img src={Add} alt={''}/>
-  if (showTick) {
-    content = (
-        <>
-          <img src={Tick} alt={''}/>
-        </>
-    )
+  const isSelected = (e) => {
+    if (!showTick) {
+      e.target.src = Tick
+      setShowTick(e.target.alt)
+    } else {
+      e.target.src = Add
+      setShowTick('')
+    }
   }
-
-  const location = useLocation();
-  const numbers = catalog.find((numbers) => `#${numbers.id}` === location.hash);
 
 
   return (
@@ -86,29 +83,33 @@ const InfoPage = () => {
                 <div className={classes.container__options__block}>
                   <img src={CookwareSet} alt={''}/>
                   <span>Дополнительный завтрак</span>
-                  <button className={classes.container__options__block_btn}
-                          onClick={() => setShowTick(!showTick)}>{content}</button>
-                  <span>+ 3000₽</span>
+                  <img className={classes.add_btn} src={Add} alt='Breakfast' onClick={(e) => isSelected(e)}/>
+                  <span className={
+                    showTick === 'Breakfast'
+                        ? classes.container__options__block_green
+                        : classes.container__options__block_hidden}>+ 3000₽</span>
                 </div>
                 <div className={classes.container__options__block}>
-                  <img src={Mocktail} alt={''}/>
+                  <img src={Mocktail} alt=''/>
                   <span>Мини-бар</span>
-                  <button className={classes.container__options__block_btn}
-                          onClick={() => setShowTick(!showTick)}>{content}</button>
-                  <span>+ 2500₽</span>
+                  <img src={Add} alt='Bar' onClick={(e) => isSelected(e)}/>
+                  <span className={
+                    showTick === 'Bar'
+                        ? classes.container__options__block_green
+                        : classes.container__options__block_hidden}>+ 2500₽</span>
                 </div>
                 <div className={classes.container__options__block}>
                   <img src={Clock} alt={''}/>
                   <span>Утренняя побудка</span>
-                  <button className={classes.container__options__block_btn}
-                          onClick={() => setShowTick(!showTick)}>{content}</button>
+                  <img src={Add} alt='Morning' onClick={(e) => isSelected(e)}/>
                 </div>
                 <div className={classes.container__options__block}>
                   <img src={Car} alt={''}/>
                   <span>Заказ трансфера</span>
-                  <button className={classes.container__options__block_btn}
-                          onClick={() => setShowTick(!showTick)}>{content}</button>
-                  <span>+ 1500₽</span>
+                  <img src={Add} alt='Transfer' onClick={(e) => isSelected(e)}/>
+                  <span className={showTick === 'Transfer'
+                      ? classes.container__options__block_green
+                      : classes.container__options__block_hidden}>+ 1500₽</span>
                 </div>
               </div>
             </div>
