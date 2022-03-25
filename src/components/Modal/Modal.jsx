@@ -17,6 +17,8 @@ const Modal = ({setOpenModal}) => {
             <Input title="ФИО:" name="text" type="text" placeholder={'Введите ФИО'}/>
             <Input title="Паспорт, серия и номер:" name="number" type="number"
                    placeholder={'Введите паспортные данные (без пробела)'}/>
+            <Input title="Адрес электронной почты:" name="email" type="email"
+                   placeholder={'Адрес электронной почты'}/>
             <Input title="Дата рождения:" name="number" type="number" placeholder={'Введите дату рождения'}/>
             <div className={classes.background__card__form_radio}>
               <p>Пол:</p>
