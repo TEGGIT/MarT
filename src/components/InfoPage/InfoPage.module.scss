@@ -88,33 +88,33 @@
   }
 
   &__options {
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    padding: 10px 20px 20px 20px;
-    margin: 20px 0 20px;
-    max-height: 360px;
+    border: 0.1875rem solid rgba(255, 255, 255, 0.5);
+    border-radius: 1.5625rem;
+    padding: 0.625rem 1.25rem 1.25rem 1.25rem;
+    margin: 1.25rem 0 1.25rem;
+    max-height: 22.5rem;
 
     &_info {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      gap: 30px;
-      height: 200px;
+      gap: 1.875rem;
+      height: 12.5rem;
     }
 
 
     &_title {
       display: flex;
-      font-size: 24px;
-      padding: 10px 0 30px 10px;
+      font-size: 1.5rem;
+      padding: 0.625rem 0 1.875rem 0.625rem;
     }
 
     &__block {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      max-height: 300px;
-      gap: 24px;
+      max-height: 18.75rem;
+      gap: 1.5rem;
       cursor: default;
 
       &_green {
