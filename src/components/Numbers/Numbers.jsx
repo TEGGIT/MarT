@@ -57,18 +57,9 @@ const Numbers = () => {
             </div>
             <div className={classes.main__section__content}>
               <div className={classes.main__section__content__cardHostel}>
-                {filteredCatalog.map((numbers) => {
+                {filteredCatalog.map((number) => {
                   return (
-                      <CardHostel
-                          image={numbers.image}
-                          category={numbers.category}
-                          size={numbers.size}
-                          price={numbers.price}
-                          places={numbers.places}
-                          info={numbers.info}
-                          food={numbers.food}
-                          id={numbers.id}
-                      />
+                      <CardHostel number={number}/>
                   )
                 })}
               </div>
