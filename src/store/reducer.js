@@ -1,4 +1,4 @@
-import CatalogData from "../mockdata/CatalogData";
+import CatalogData from "../mockdata/сatalogData";
 
 const defaultState = CatalogData
 
