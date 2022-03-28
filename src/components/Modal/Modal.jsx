@@ -5,7 +5,6 @@ import Button from '../UI/Button/Button'
 import Switch from '@mui/material/Switch';
 
 
-
 const Modal = ({setOpenModal}) => {
 
   const closeModal = () => setOpenModal(false)
@@ -13,11 +12,6 @@ const Modal = ({setOpenModal}) => {
     e.preventDefault();
 
   }
-  const [checked, setChecked] = React.useState(false);
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
 
   const [email, setEmail] = useState("")
   const [visidEmail, setVisidEmail] = useState(false)
@@ -31,9 +25,17 @@ const Modal = ({setOpenModal}) => {
   const [dataBirthday, setDataBirthday] = useState("")
   const [visidDataBirthday, setVisidDataBirthday] = useState(false)
   const [errorDataBirthday, setErrorDataBirthday] = useState("Заполните дату рождения")
+  const [hiddenInput, setHiddenInput] = useState({display: 'none'})
+  const [checked, setChecked] = React.useState(false);
 
-
-
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+    if (event.target.checked = checked) {
+      setHiddenInput({display: 'none'})
+    } else {
+      setHiddenInput({margin: 'empty'})// Костыль))) У меня сейчас нет времени сидеть по 2 часа над такими вещами
+    }
+  };
 
   const emailValue = (e) => {
     setEmail(e.target.value)
@@ -59,16 +61,16 @@ const Modal = ({setOpenModal}) => {
     setPhone(e.target.value)
     if (!phoneRe.test(e.target.value)) {
       setPhoneError("Неккоретный номер")
-    }else{
+    } else {
       setPhoneError("")
     }
   }
 
   const dataBirtdayValue = (e) => {
     setDataBirthday(e.target.value)
-    if (e.target.value.length < 10){
+    if (e.target.value.length < 10) {
       setErrorDataBirthday("Неккоретная дата рождения")
-    }else{
+    } else {
       setErrorDataBirthday("")
     }
   }
@@ -97,23 +99,33 @@ const Modal = ({setOpenModal}) => {
             <span>Номер комнаты: № <span/> </span>
 
             <Input title="Дата и время прибытия:" name="datetime" type="datetime-local"/>
-            <Input title="ФИО:" name="text" type="text" placeholder={'Иванов Иван Иванович'} onBlur={e => inputBlur(e)}
-                   onChange={e => fioValue(e)} value={fio}/>
-            {(visidFio && fioError) && <div style={{color: ("red")}}>{fioError}</div>}
-            <Input onChange={e => emailValue(e)} onBlur={e => inputBlur(e)} title="Адрес электронной почты:"
-                   name="email" type="email"
-                   placeholder={'ymenya.netprav32@gmail.com'} value={email}/>
-            {(visidEmail && emailError) && <div style={{color: ("red")}}>{emailError}</div>}
-            <Input  onChange={e => dataBirtdayValue(e)} onBlur={e => inputBlur(e)} title="Дата рождения:" name="dataBirthday" type="data" placeholder={'дд.мм.гггг'} value={dataBirthday}/>
-            {(visidDataBirthday && errorDataBirthday) && <div style={{color:"red"}}>{errorDataBirthday}</div>}
-            <Input onChange={e => phoneValue(e)} onBlur={e => inputBlur(e)} title="Номер телефона:" name="phone" type="number" value={phone}
-                   placeholder={'+79999999999'}/>
-            {(visidPhone && phoneError) && <div style={{color: ("red")}}>{phoneError}</div>}
+            <div style={hiddenInput}><Input title="ФИО:" name="text" type="text" placeholder={'Иванов Иван Иванович'}
+                                            onBlur={e => inputBlur(e)}
+                                            onChange={e => fioValue(e)} value={fio}/>
+              {(visidFio && fioError) && <div style={{color: ("red")}}>{fioError}</div>}
+            </div>
+            <div style={hiddenInput}>
+              <Input onChange={e => emailValue(e)} onBlur={e => inputBlur(e)} title="Адрес электронной почты:"
+                     name="email" type="email"
+                     placeholder={'ymenya.netprav32@gmail.com'} value={email}/>
+              {(visidEmail && emailError) && <div style={{color: ("red")}}>{emailError}</div>}
+            </div>
+            <div style={hiddenInput}>
+              <Input onChange={e => dataBirtdayValue(e)} onBlur={e => inputBlur(e)} title="Дата рождения:"
+                     name="dataBirthday" type="data" placeholder={'дд.мм.гггг'} value={dataBirthday}/>
+              {(visidDataBirthday && errorDataBirthday) && <div style={{color: "red"}}>{errorDataBirthday}</div>}
+            </div>
+            <div style={hiddenInput}>
+              <Input onChange={e => phoneValue(e)} onBlur={e => inputBlur(e)} title="Номер телефона:" name="phone"
+                     type="number" value={phone}
+                     placeholder={'+79999999999'}/>
+              {(visidPhone && phoneError) && <div style={{color: ("red")}}>{phoneError}</div>}
+            </div>
             <div className={classes.switch}>
               <Switch
                   checked={checked}
                   onChange={handleChange}
-                  inputProps={{ 'aria-label': 'controlled' }}
+                  inputProps={{'aria-label': 'controlled'}}
               />
               <p>Для другого человека</p>
             </div>
