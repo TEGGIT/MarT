@@ -19,7 +19,7 @@ const Registrations = () => {
             </div>
             <form className={classes.registrations_form}>
               <Input type={'text'} title='ФИО:'/>
-              <Input type={'number'} title={'Паспорт, серия и номер:'}/>
+              <Input type={'text'} title={'Адрес электронной почты:'}/>
               <Input type={'date'} title={'Дата рождения:'}/>
               <Input type={'number'} title={'Номер телефона:'}/>
               <Button type={'submit'} text={'Зарегистрироваться'}/>
