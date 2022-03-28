@@ -17,7 +17,6 @@ const InfoPage = () => {
   const location = useLocation()
   const allNumbers = useSelector((state) => state.catalogReducer)
   const [thisNumber, setThisNumber] = useState(allNumbers.find((number) => location.hash === `#${number.id}`))
-  console.log(thisNumber)
   const [openModal, setOpenModal] = useState(false)
   const [servicesState, setServicesState] = useState({
     breakfast: false,

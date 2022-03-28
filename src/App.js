@@ -1,4 +1,3 @@
-
 import './App.css';
 import MainContent from "./components/MainContent/MainContent";
 import Contact from "./components/Contact/Contact";
@@ -8,28 +7,29 @@ import Numbers from "./components/Numbers/Numbers";
 import InfoPage from "./components/InfoPage/InfoPage";
 import {Provider} from "react-redux";
 import {store} from "./store/store";
+import Registrations from "./components/Registrations/Registrations";
 
 
 function App(menuItem) {
-    return (
-        <div className="App">
-            <Provider store={store} >
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<MainContent/>}/>
-                    <Route path="/main-page" element={<MainContent/>}/>
-                    <Route path="/contact-page" element={<Contact/>}/>
-                    <Route path="/sosi" element={<Service/>}/>
-                    <Route path="/numbers-page" element={<Numbers/>}/>
-                    <Route path="/info-page" element={<InfoPage/>}/>
+  return (
+      <div className="App">
+        <Provider store={store}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<MainContent/>}/>
+              <Route path="/main-page" element={<MainContent/>}/>
+              <Route path="/contact-page" element={<Contact/>}/>
+              <Route path="/sosi" element={<Service/>}/>
+              <Route path="/numbers-page" element={<Numbers/>}/>
+              <Route path="/info-page" element={<InfoPage/>}/>
+              <Route path="/registration-page" element={<Registrations/>}/>
 
 
-
-                </Routes>
-            </BrowserRouter>
-            </Provider>
-        </div>
-    );
+            </Routes>
+          </BrowserRouter>
+        </Provider>
+      </div>
+  );
 }
 
 export default App;

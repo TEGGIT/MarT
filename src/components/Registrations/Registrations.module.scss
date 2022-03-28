@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.registrations {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 80px;
+  background: #343434;
+  border-radius: 25px;
+
+
+  &_title {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+
+
