@@ -5,6 +5,12 @@ input::-webkit-inner-spin-button {
   margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
+
+.switch{
+  display: flex;
+  align-items: center;
+}
+
 .background {
   height: 100vh;
   width: 100vw;
