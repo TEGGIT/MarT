@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import classes from './Modal.module.scss'
 import Input from "../UI/Input/Input";
 import Button from '../UI/Button/Button'
+import Switch from '@mui/material/Switch';
+
+
 
 const Modal = ({setOpenModal}) => {
 
@@ -10,6 +13,12 @@ const Modal = ({setOpenModal}) => {
     e.preventDefault();
 
   }
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
   const [email, setEmail] = useState("")
   const [visidEmail, setVisidEmail] = useState(false)
   const [emailError, setEmailError] = useState("Email не должен быть пустым")
@@ -86,6 +95,7 @@ const Modal = ({setOpenModal}) => {
           <form className={classes.background__card__form}>
             <h2 className={classes.background__card_title}>Регистрация номера</h2>
             <span>Номер комнаты: № <span/> </span>
+
             <Input title="Дата и время прибытия:" name="datetime" type="datetime-local"/>
             <Input title="ФИО:" name="text" type="text" placeholder={'Иванов Иван Иванович'} onBlur={e => inputBlur(e)}
                    onChange={e => fioValue(e)} value={fio}/>
@@ -99,6 +109,14 @@ const Modal = ({setOpenModal}) => {
             <Input onChange={e => phoneValue(e)} onBlur={e => inputBlur(e)} title="Номер телефона:" name="phone" type="number" value={phone}
                    placeholder={'+79999999999'}/>
             {(visidPhone && phoneError) && <div style={{color: ("red")}}>{phoneError}</div>}
+            <div className={classes.switch}>
+              <Switch
+                  checked={checked}
+                  onChange={handleChange}
+                  inputProps={{ 'aria-label': 'controlled' }}
+              />
+              <p>Для другого человека</p>
+            </div>
             <Button
                 onClick={e => def(e)}
                 text={'Бронировать'}
