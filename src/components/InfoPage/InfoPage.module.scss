@@ -26,7 +26,8 @@
   &__hotelCard {
     display: flex;
     border-radius: 1.5625rem;
-    background: #282828;
+    background: #B8B8B8;
+    color: black;
 
     &__bottomInfo {
       display: flex;
@@ -34,6 +35,7 @@
       flex-direction: column;
 
       &_info {
+        color: black;
         display: flex;
 
 
