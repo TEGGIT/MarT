@@ -11,51 +11,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import InputBase from '@mui/material/InputBase';
-
-
-const BootstrapInput = styled(InputBase)(({ theme }) => ({
-  'label + &': {
-    marginTop: theme.spacing(0),
-  },
-  '& .MuiInputBase-input': {
-    borderRadius: 4,
-    position: 'relative',
-    backgroundColor: "none",
-    border: '1px solid black',
-    fontSize: 16,
-    padding: '16.5px 12px 16.5px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    '&:focus': {
-      borderRadius: 4,
-      borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-    },
-  },
-}));
-
-const ITEM_HEIGHT = 30;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import Stack from '@mui/material/Stack';
+import MobileDateRangePicker from '@mui/lab/MobileDateRangePicker';
+import DesktopDateRangePicker from '@mui/lab/DesktopDateRangePicker';
 
 const Modal = ({setOpenModal}) => {
 
@@ -92,13 +52,6 @@ const Modal = ({setOpenModal}) => {
   const templateDate = (e) => {
   //тут будет шаблонизатор
   }
-
-  const [age, setAge] = React.useState('');
-  const inputDate = (event) => {
-    setAge(event.target.value);
-  };
-
-
 
   const emailValue = (e) => {
     setEmail(e.target.value)
@@ -164,50 +117,7 @@ const Modal = ({setOpenModal}) => {
           <form className={classes.background__card__form}>
             <h2 className={classes.background__card_title}>Регистрация номера</h2>
             <span>Номер комнаты: № <span/> </span>
-            <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '20px',
-                  '& .MuiTextField-root': { width: '18ch' },
-                }}
-            >
-            <TextField label={'Дата прибытия'} id="inputDate" value="В РАЗРАБОТКЕ"/>
-              <FormControl sx={{ m: 0 }} variant="standard">
-                <InputLabel id="demo-customized-select-label">Заезд</InputLabel>
-                <Select
-                    labelId="demo-customized-select-label"
-                    id="demo-customized-select"
-                    value={age}
-                    onChange={inputDate}
-                    input={<BootstrapInput />}
-                    MenuProps={MenuProps}
-                >
-                  <MenuItem value={10}>12:00</MenuItem>
-                  <MenuItem value={10}>13:00</MenuItem>
-                  <MenuItem value={10}>14:00</MenuItem>
-                  <MenuItem value={20}>15:00</MenuItem>
-                  <MenuItem value={30}>16:00</MenuItem>
-                </Select>
-              </FormControl>
-              <FormControl sx={{ m: 0 }} variant="standard">
-                <InputLabel id="demo-customized-select-label">Выезд</InputLabel>
-                <Select
-                    labelId="demo-customized-select-label"
-                    id="demo-customized-select"
-                    value={age}
-                    onChange={inputDate}
-                    input={<BootstrapInput />}
-                    MenuProps={MenuProps}
-                >
-                  <MenuItem value={10}>12:00</MenuItem>
-                  <MenuItem value={10}>13:00</MenuItem>
-                  <MenuItem value={10}>14:00</MenuItem>
-                  <MenuItem value={20}>15:00</MenuItem>
-                  <MenuItem value={30}>16:00</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+
             <div style={hiddenInput}><Input title="ФИО:" name="text" type="text" placeholder={'Иванов Иван Иванович'}
                                             onBlur={e => inputBlur(e)}
                                             onChange={e => fioValue(e)} value={fio}/>
