@@ -44,9 +44,9 @@ const Numbers = () => {
                   text="Family room"
                 />
                 <ButtonNav
-                  name="Delux"
+                  name="Deluxe"
                   onClick={(e) => filtered(e)}
-                  text="Delux"
+                  text="Deluxe"
                 />
                 <ButtonNav
                   name="Presidential Suite"

@@ -44,7 +44,7 @@ const catalog = [
 
   },
   {
-    category: "Семейный номер Viev",
+    category: "Семейный номер View",
     image: img3,
     price: 20000,
     id: "BXD100BLK02",
@@ -93,7 +93,7 @@ const catalog = [
     image: img6,
     price: 35000,
     id: "BXD100BLK05",
-    filter: 'Delux',
+    filter: 'Deluxe',
     info: [
       {description: "38 м2", image: IconSquare},
       {description: 'До 3‑х человек (включая детей 4‑13 лет)', image: User},
@@ -108,7 +108,7 @@ const catalog = [
     image: img7,
     price: 50000,
     id: "BXD100BLK06",
-    filter: 'Delux',
+    filter: 'Deluxe',
     info: [
       {description: "200 м2", image: IconSquare},
       {description: 'До 4‑х человек (или 4 взрослых и 2 ребенка 4‑13 лет)', image: User},
@@ -123,7 +123,7 @@ const catalog = [
     image: img8,
     price: 60000,
     id: "BXD100BLK07",
-    filter: 'Delux',
+    filter: 'Deluxe',
     info: [
       {description: "200 м2", image: IconSquare},
       {description: 'До 6‑ти человек (также можно разместить до 3‑х детей до 3‑х лет включительно)', image: User},
