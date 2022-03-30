@@ -10,7 +10,7 @@ import Registrations from './components/Registrations/Registrations'
 import Service from './components/Service/Service'
 import { store } from './store/store'
 
-const App = (menuItem) => (
+const App = () => (
   <div className="App">
     <Provider store={store}>
       <BrowserRouter>
