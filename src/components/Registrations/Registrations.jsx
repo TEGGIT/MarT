@@ -128,9 +128,12 @@ const Registrations = () => {
                   title="ФИО:"
                   placeholder="Иванов Иван Иванович"
               />
-              {visitFio && fioError && (
-                  <div style={{color: 'red'}}>{fioError}</div>
-              )}
+              <div className={classes.registrations_form_valid}>
+                {visitFio && fioError && (
+                    <div style={{color: 'red', position: 'absolute'}}>{fioError}</div>
+                )}
+              </div>
+
               <Input
                   onChange={(e) => emailHandler(e)}
                   value={email}
@@ -140,9 +143,11 @@ const Registrations = () => {
                   title="Адрес электронной почты:"
                   placeholder="ymenya.netprav32@gmail.com"
               />
-              {emailVisit && emailError && (
-                  <div style={{color: 'red'}}>{emailError}</div>
-              )}
+              <div className={classes.registrations_form_valid}>
+                {emailVisit && emailError && (
+                    <div style={{color: 'red', position: 'absolute'}}>{emailError}</div>
+                )}
+              </div>
               <Input
                   onChange={(e) => passwordHandler(e)}
                   value={password}
@@ -152,9 +157,11 @@ const Registrations = () => {
                   title="Пароль"
                   placeholder="absd123"
               />
-              {passwordVisit && passwordError && (
-                  <div style={{color: 'red'}}>{passwordError}</div>
-              )}
+              <div className={classes.registrations_form_valid}>
+                {passwordVisit && passwordError && (
+                    <div style={{color: 'red', position: 'absolute'}}>{passwordError}</div>
+                )}
+              </div>
               <Input
                   onBlur={(e) => blurHandler(e)}
                   onChange={(e) => phoneHandler(e)}
@@ -164,9 +171,11 @@ const Registrations = () => {
                   title="Номер телефона:"
                   placeholder="+79999999999"
               />
-              {visitPhone && phoneError && (
-                  <div style={{color: 'red'}}>{phoneError}</div>
-              )}
+              <div className={classes.registrations_form_valid}>
+                {visitPhone && phoneError && (
+                    <div style={{color: 'red', position: 'absolute'}}>{phoneError}</div>
+                )}
+              </div>
               <Input
                   onChange={(e) => dateHandler(e)}
                   onBlur={(e) => blurHandler(e)}
@@ -176,9 +185,11 @@ const Registrations = () => {
                   title="Дата рождения:"
                   placeholder="дд.мм.гг"
               />
-              {visitDate && DateError && (
-                  <div style={{color: 'red'}}>{DateError}</div>
-              )}
+              <div className={classes.registrations_form_valid}>
+                {visitDate && DateError && (
+                    <div style={{color: 'red', position: 'absolute'}}>{DateError}</div>
+                )}
+              </div>
               <Button
                   disabled={!formValid}
                   type="submit"
