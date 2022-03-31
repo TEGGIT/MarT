@@ -13,11 +13,11 @@ import Footer from '../Footer/Footer'
 
 const Service = () => (
     <>
-      <Header />
+      <Header/>
       <main>
         <div
-          className={classes.serviceBack}
-          style={{ backgroundImage: `url(${BackImg})` }}
+            className={classes.serviceBack}
+            style={{backgroundImage: `url(${BackImg})`}}
         >
           <div className={classes.serviceBack__title}>
             <h1>Услуги</h1>
@@ -27,7 +27,7 @@ const Service = () => (
           <div className={classes.content}>
             <div className={classes.content_info}>
               <div className={classes.content_info__conteiner}>
-                <img src={Food} alt="Картинка еды" />
+                <img src={Food} alt="Картинка еды"/>
 
                 <div className={classes.content_info__conteiner_text}>
                   <h3>Еда в номер</h3>
@@ -40,7 +40,7 @@ const Service = () => (
               <div>
                 <div className={classes.content_info__conteiner}>
                   <div className={classes.content_info__conteiner_revers}>
-                    <img src={Bar} alt="Картинка бара" />
+                    <img src={Bar} alt="Картинка бара"/>
                     <div className={classes.content_info__conteiner_text}>
                       <h3>Лобби-бар</h3>
                       <p>
@@ -53,7 +53,7 @@ const Service = () => (
                 </div>
                 <div>
                   <div className={classes.content_info__conteiner}>
-                    <img src={Clean} alt="Картинка уборки" />
+                    <img src={Clean} alt="Картинка уборки"/>
                     <div className={classes.content_info__conteiner_text}>
                       <h3>Клининг</h3>
                       <p>
@@ -66,7 +66,7 @@ const Service = () => (
                 </div>
                 <div className={classes.content_info__conteiner}>
                   <div className={classes.content_info__conteiner_revers}>
-                    <img src={WiFi} alt="Картинка WI-FI" />
+                    <img src={WiFi} alt="Картинка WI-FI"/>
                     <div className={classes.content_info__conteiner_text}>
                       <h3>Сеть WI-FI</h3>
                       <p>
@@ -78,7 +78,7 @@ const Service = () => (
                 </div>
                 <div>
                   <div className={classes.content_info__conteiner}>
-                    <img src={Library} alt="Картинка библиотеки" />
+                    <img src={Library} alt="Картинка библиотеки"/>
                     <div className={classes.content_info__conteiner_text}>
                       <h3>Библиотека</h3>
                       <p>
@@ -93,8 +93,8 @@ const Service = () => (
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer/>
     </>
-  )
+)
 
 export default Service
