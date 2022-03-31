@@ -1,4 +1,4 @@
-main {
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,9 @@ main {
   display: flex;
   flex-direction: column;
   color: white;
-  padding: 80px;
+  padding: 5rem;
   background: #343434;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
 
 
   &_title {
@@ -22,8 +22,14 @@ main {
   &_form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 1.4375rem;
+    margin-top: 1.25rem;
+
+    &_valid {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
   }
 }
 
