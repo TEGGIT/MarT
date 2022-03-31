@@ -6,7 +6,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-.switch{
+.switch {
   display: flex;
   align-items: center;
 }
@@ -24,11 +24,11 @@ input::-webkit-inner-spin-button {
   align-items: center;
 
   &__card {
-    padding: 2.75rem;
+    padding: 2.75rem 2.75rem 2.75rem 4.5rem;
     border-radius: 1.25rem;
     background: rgba(255, 255, 255, 0.39);
     backdrop-filter: blur(8px);
-    box-shadow:  -7px -7px 15px #4b4b4b,
+    box-shadow: -7px -7px 15px #4b4b4b,
     7px 7px 15px #7b7b7b;
 
     &__form {
@@ -36,6 +36,7 @@ input::-webkit-inner-spin-button {
       display: flex;
       gap: 20px;
       flex-direction: column;
+
 
       &_radio {
         display: flex;
