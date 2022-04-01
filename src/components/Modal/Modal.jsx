@@ -17,7 +17,7 @@ import './muiStyles.scss'
 const Modal = ({ setOpenModal }) => {
   const closeModal = () => setOpenModal(false)
 
-  const [value, setValue] = React.useState(new Date('2018-01-01T00:00:00.000Z'))
+  const [value, setValue] = React.useState(new Date('2022-00-00T00:00:00.000Z'))
   const [email, setEmail] = useState('')
   const [visitEmail, setVisitEmail] = useState(false)
   const [emailError, setEmailError] = useState('Введите email')
@@ -36,7 +36,6 @@ const Modal = ({ setOpenModal }) => {
   const [checked, setChecked] = React.useState(false)
   const [valueData, setValueData] = React.useState([null, null])
   const [formValid, setFormValid] = useState(false)
-
   useEffect(() => {
     if (emailError || phoneError || errorDataBirthday || fioError) {
       setFormValid(false)
@@ -144,9 +143,9 @@ const Modal = ({ setOpenModal }) => {
                 }}
                 renderInput={(startProps, endProps) => (
                   <>
-                    <TextField {...startProps} />
+                    <TextField {...startProps} color="success" />
                     <Box sx={{ mx: 2 }}> до </Box>
-                    <TextField {...endProps} />
+                    <TextField {...endProps} color="success" />
                   </>
                 )}
               />
