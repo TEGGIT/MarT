@@ -36,28 +36,35 @@ const Modal = ({ setOpenModal }) => {
   const [checked, setChecked] = React.useState(false)
   const [valueData, setValueData] = React.useState([null, null])
   const [formValid, setFormValid] = useState(false)
+  const [muiValid, setMuiValid] = useState(false)
+
   useEffect(() => {
     if (emailError || phoneError || errorDataBirthday || fioError) {
       setFormValid(false)
     } else {
       setFormValid(true)
-      console.log(2)
     }
   }, [emailError, phoneError, errorDataBirthday, fioError])
-
+  useEffect(() => {
+    if (checked || muiValid) {
+      setFormValid(true)
+    } else {
+      setFormValid(false)
+    }
+  }, [checked, muiValid])
   const handleChange = (event) => {
     setChecked(event.target.checked)
     event.target.checked
       ? setHiddenInput({ display: 'block', width: '18.75rem' })
       : setHiddenInput({ display: 'none' })
   }
-
+  console.log(checked)
+  console.log(muiValid)
   const templateDate = (e) => {
     if (e.target.value.length === 2) {
       e.target.value += '.'
     }
   }
-
   const emailValue = (e) => {
     setEmail(e.target.value)
     const re = /\S+@\S+\.\S+/
@@ -67,7 +74,6 @@ const Modal = ({ setOpenModal }) => {
       setEmailError('')
     }
   }
-
   const fioValue = (e) => {
     setFio(e.target.value)
     if (e.target.value.length < 3) {
@@ -114,6 +120,15 @@ const Modal = ({ setOpenModal }) => {
     }
   }
 
+  const validationData = (newValue) => {
+    setValueData(newValue)
+    if (!newValue[0] && !newValue[1]) {
+      setMuiValid(false)
+    } else {
+      setMuiValid(true)
+    }
+  }
+
   return (
     <div className={classes.background} onClick={closeModal}>
       <div
@@ -132,15 +147,12 @@ const Modal = ({ setOpenModal }) => {
             <h2 className={classes.background__card_title}>
               Регистрация номера
             </h2>
-
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DateRangePicker
                 startText="Дата заезда"
                 endText="Дата выезда"
                 value={valueData}
-                onChange={(newValue) => {
-                  setValueData(newValue)
-                }}
+                onChange={(newValue) => validationData(newValue)}
                 renderInput={(startProps, endProps) => (
                   <>
                     <TextField {...startProps} color="success" />
@@ -157,6 +169,7 @@ const Modal = ({ setOpenModal }) => {
                   value={value}
                   onChange={setValue}
                   renderInput={(params) => <TextField {...params} />}
+                  defaultValue="07:30"
                 />
                 <TimePicker
                   label="Время выезда"
