@@ -17,7 +17,7 @@ import './muiStyles.scss'
 const Modal = ({ setOpenModal }) => {
   const closeModal = () => setOpenModal(false)
 
-  const [value, setValue] = React.useState(new Date('2022-00-00T00:00:00.000Z'))
+  const [value, setValue] = React.useState(new Date('2020-01-01 24:00'))
   const [email, setEmail] = useState('')
   const [visitEmail, setVisitEmail] = useState(false)
   const [emailError, setEmailError] = useState('Введите email')
@@ -58,8 +58,6 @@ const Modal = ({ setOpenModal }) => {
       ? setHiddenInput({ display: 'block', width: '18.75rem' })
       : setHiddenInput({ display: 'none' })
   }
-  console.log(checked)
-  console.log(muiValid)
   const templateDate = (e) => {
     if (e.target.value.length === 2) {
       e.target.value += '.'
@@ -129,6 +127,15 @@ const Modal = ({ setOpenModal }) => {
     }
   }
 
+  const validationTime = (newValueTime) => {
+    setValue(newValueTime)
+    if (!newValueTime) {
+      setMuiValid(false)
+    } else {
+      setMuiValid(true)
+    }
+  }
+
   return (
     <div className={classes.background} onClick={closeModal}>
       <div
@@ -165,17 +172,16 @@ const Modal = ({ setOpenModal }) => {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <Stack spacing={3}>
                 <TimePicker
-                  label="Время заезда"
-                  value={value}
-                  onChange={setValue}
                   renderInput={(params) => <TextField {...params} />}
-                  defaultValue="07:30"
+                  value={value}
+                  label="Время заезда"
+                  onChange={(newValueTime) => validationTime(newValueTime)}
                 />
                 <TimePicker
-                  label="Время выезда"
-                  value={value}
-                  onChange={setValue}
                   renderInput={(params) => <TextField {...params} />}
+                  value={value}
+                  label="Время выезда"
+                  onChange={(newValueTime) => validationTime(newValueTime)}
                 />
               </Stack>
             </LocalizationProvider>
