@@ -8,6 +8,10 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 480px) {
+      max-width: 480px;
+      width: 100% !important;
+    }
 
 
     &__contentTop {
@@ -17,12 +21,35 @@
       justify-content: center;
       align-items: center;
 
+      @media (max-width: 480px) {
+        height: auto;
+      }
+
+
+      & img {
+        @media (max-width: 480px) {
+          background: 100% no-repeat;
+        }
+      }
+
+
       &__present {
         width: 100%;
         max-width: 80rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media only screen and (max-width: 480px) {
+          padding: 20px;
+        }
+
+
+        & img {
+          @media only screen and (max-width: 480px) {
+            width: 40%;
+          }
+        }
+
 
         &__text {
           margin-top: 3.563rem;
@@ -30,6 +57,10 @@
           justify-content: center;
           font-size: 4em;
           color: #FFFFFF;
+          @media only screen and (max-width: 480px) {
+            font-size: 2rem;
+          }
+
 
           &_green {
             color: #83B888;
@@ -44,7 +75,9 @@
       width: 100%;
       display: flex;
       justify-content: center;
-
+      @media only screen and (max-width: 480px) {
+        padding: 0 1.25rem;
+      }
 
       &__container {
         width: 100%;
@@ -53,6 +86,10 @@
         display: flex;
         justify-content: center;
         gap: 70px;
+        @media only screen and (max-width: 480px) {
+          display: flex;
+          flex-wrap: wrap;
+        }
 
 
         &__text {
@@ -62,8 +99,11 @@
 
 
           &_top {
-
             font-size: 48px;
+            @media only screen and (max-width: 480px) {
+              font-size: 2.5rem;
+            }
+
 
             &_color {
               color: #83B888;
@@ -72,16 +112,26 @@
 
           &_main {
             font-size: 31px;
+            @media only screen and (max-width: 480px) {
+              font-size: 1.5rem;
+            }
           }
         }
+      }
 
-      }
-      &__image{
-        display: flex;
-        flex-direction: column;
-        gap: 4.125rem;
-      }
     }
 
+    &__image {
+      display: flex;
+      flex-direction: column;
+      gap: 4.125rem;
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+      }
+
+
+    }
   }
 }
+
+
