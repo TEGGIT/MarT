@@ -1,4 +1,4 @@
-.footer{
+.footer {
   background-color: #131313;
   display: flex;
   justify-content: center;
@@ -7,22 +7,34 @@
   flex: 0 0 auto;
 
 
-
-  &__nav{
+  &__nav {
     width: 100%;
     max-width: 75rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-
-    &__logo{
-
-
+    @media (max-width: 480px) {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
     }
-    &__text{
+
+
+    &__logo {
+      & img {
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__text {
       font-size: 0.875rem;
       color: rgba(196, 196, 196, 0.5);
+
+      @media (max-width: 480px) {
+        font-size: 8px;
+      }
 
     }
   }
