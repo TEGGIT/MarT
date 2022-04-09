@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import classes from './HamburgerMenu.module.scss'
-import iconN from "../../assets/nomera.svg";
-import iconA from "../../assets/Uslugi.svg";
-import iconP from "../../assets/Phone.svg";
-import account from "../../assets/account.svg";
+import iconN from "../../../assets/nomera.svg";
+import iconA from "../../../assets/Uslugi.svg";
+import iconP from "../../../assets/Phone.svg";
+import account from "../../../assets/account.svg";
 
 
 const HamburgerMenu = ({header, active}) => (
