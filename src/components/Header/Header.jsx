@@ -6,7 +6,7 @@ import iconN from '../../assets/nomera.svg'
 import iconA from '../../assets/Uslugi.svg'
 import iconP from '../../assets/Phone.svg'
 import account from '../../assets/account.svg'
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import HamburgerMenu from "../UI/HamburgerMenu/HamburgerMenu";
 
 const Header = () => {
 

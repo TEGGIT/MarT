@@ -8,6 +8,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 480px) {
+      margin: 0;
+    }
 
 
     &__contentTop {
@@ -16,23 +19,34 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      @media only screen and (max-width: 480px) {
+        height: auto;
+        padding: 1.5625rem;
+      }
 
       &__container {
         width: 100%;
-        max-width: 1280px;
+        max-width: 80rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 146px;
+        gap: 9.125rem;
+        @media only screen and (max-width: 480px) {
+          gap: 1.875rem;
+        }
 
         &__title {
           display: flex;
           justify-content: center;
-          border-radius: 100px 23px;
+          border-radius: 6.25rem 1.4375rem;
           background: rgba(136, 136, 136, 0.5);
           width: 37.5rem;
           font-size: 5rem;
           color: white;
+          @media only screen and (max-width: 480px) {
+            width: 20rem;
+            font-size: 2rem;
+          }
 
 
         }
@@ -40,9 +54,10 @@
         &__nav {
           display: flex;
           justify-content: center;
-          gap: 20px;
-
-
+          gap: 1.25rem;
+          @media only screen and (max-width: 480px) {
+            gap: 0.5rem;
+          }
         }
       }
 
@@ -53,6 +68,9 @@
       display: flex;
       justify-content: center;
       width: 100%;
+      @media only screen and (max-width: 480px) {
+        display: flex;
+      }
 
 
       &__container {
@@ -62,60 +80,86 @@
         display: flex;
         flex-direction: column;
         align-content: center;
+        @media only screen and (max-width: 480px) {
+          margin-top: 2rem;
+          height: 15.625rem;
+        }
 
         &__card {
           background: #B8B8B8;
-          box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.25);
-          border-top-left-radius: 53px;
-          border-top-right-radius: 53px;
+          box-shadow: 0.625rem 0.625rem 0.125rem rgba(0, 0, 0, 0.25);
+          border-top-left-radius: 3.3125rem;
+          border-top-right-radius: 3.3125rem;
           display: flex;
           gap: 4.188rem;
           width: 80rem;
+          @media only screen and (max-width: 480px) {
+            width: 22rem;
+            height: 50%;
+            border-radius: 0.625rem 0.625rem;
+          }
 
           &__image {
             display: flex;
-            border-radius: 51px 51px 0 0;
+            border-radius: 3.1875rem 3.1875rem 0 0;
+            @media only screen and (max-width: 480px) {
+              width: 5.625rem;
+            }
 
           }
 
           &__info {
             display: flex;
             flex-direction: column;
-            gap: 35px;
-
-            padding: 0 16px 0 0;
+            gap: 2.1875rem;
+            @media only screen and (max-width: 480px) {
+              display: flex;
+              gap: 0.9375rem;
+              align-items: center;
+            }
 
 
             &__text_top {
-              font-size: 36px;
-              line-height: 45px;
-              padding: 16px 0 0 0;
+              font-size: 2.25rem;
+              line-height: 2.8125rem;
+              padding: 1rem 0 0 0;
               color: #000000;
+              @media only screen and (max-width: 480px) {
+                font-weight: bold;
+                font-size: 0.75rem;
+                text-align: center;
+              }
 
 
             }
 
             &__text {
-              font-size: 20px;
+              font-size: 1.25rem;
               display: flex;
               align-items: center;
-              gap: 14px;
+              gap: 0.875rem;
               color: #000000;
-
-
+              @media only screen and (max-width: 480px) {
+                display: none;
+              }
             }
 
             &__status {
               display: flex;
-              justify-content: flex-start;
-              gap: 20px;
+              gap: 1.25rem;
+              @media only screen and (max-width: 480px) {
+                gap: 0.625rem;
+              }
 
               & p {
                 background: rgba(88, 85, 85, 0.4);
                 color: black;
-                font-size: 20px;
-                padding: 5px;
-
+                font-size: 1.25rem;
+                padding: 0.3125rem;
+                @media only screen and (max-width: 480px) {
+                  font-size: 0.6875rem;
+                  border-radius: 0.3125rem;
+                }
               }
 
               &_color {
@@ -132,12 +176,17 @@
           justify-content: center;
           align-items: center;
           background: #222222;
-          border-radius: 0 0 53px 53px;
-          width: 1280px;
+          border-radius: 0 0 3.3125rem 3.3125rem;
+          width: 80rem;
           text-decoration: none;
           color: white;
-          font-size: 36px;
-          padding: 12px;
+          font-size: 2.25rem;
+          padding: 0.75rem;
+          @media only screen and (max-width: 480px) {
+            width: 22rem;
+            font-size: 0.9375rem;
+            border-radius: 0.625rem 0.625rem;
+          }
 
           &:hover {
             background-color: #4e4d4d;
