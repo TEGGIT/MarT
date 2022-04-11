@@ -21,22 +21,46 @@
   width: 100%;
   max-width: 75rem;
   margin-top: 1.4375rem;
+  @media only screen and (max-width: 480px) {
+    padding: 0.625rem;
+  }
 
 
   &__hotelCard {
     display: flex;
-    border-radius: 1.5625rem;
+    border-radius: 1.875rem 1.875rem 1.875rem 1.875rem;
     background: #B8B8B8;
     color: black;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+      width: 95%;
+      margin: 0 auto;
+    }
+    @media only screen and (max-width: 280px) {
+      width: 100%;
+    }
+
+
+    & img {
+      @media only screen and (max-width: 480px) {
+        border-radius: 3.4375rem 3.4375rem 0 0;
+      }
+
+    }
+
 
     &__bottomInfo {
       display: flex;
       align-items: flex-end;
       flex-direction: column;
 
+
       &_info {
         color: black;
         display: flex;
+        @media only screen and (max-width: 480px) {
+          justify-content: flex-end;
+        }
 
 
         &_price {
@@ -44,6 +68,15 @@
           align-items: center;
           padding: 0 1.25rem;
           font-size: 1.5rem;
+          @media only screen and (max-width: 480px) {
+            width: 100%;
+            padding: 0 1.5625rem 0 0;
+            font-size: 1.125rem;
+            font-weight: bold;
+          }
+          @media only screen and (max-width: 280px) {
+            font-size: 0.6875rem;
+          }
 
         }
 
@@ -58,6 +91,13 @@
           color: white;
           font-size: 1.5rem;
           border-radius: 1.5625rem 0;
+          @media only screen and (max-width: 480px) {
+            width: 50%;
+            padding: 0.9375rem;
+            font-size: 0.9375rem;
+            display: flex;
+            justify-content: center;
+          }
         }
 
         &_btn:hover {
@@ -83,6 +123,15 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        @media only screen and (max-width: 480px) {
+          margin-top: 0.9375rem;
+        }
+
+        & img {
+          @media only screen and (max-width: 480px) {
+            width: 10%;
+          }
+        }
       }
 
 
@@ -94,7 +143,14 @@
     border-radius: 1.5625rem;
     padding: 0.625rem 1.25rem 1.25rem 1.25rem;
     margin: 1.25rem 0 1.25rem;
-    max-height: 22.5rem;
+    @media only screen and (max-width: 480px) {
+      width: 95%;
+      margin: 1.5625rem auto;
+    }
+    @media only screen and (max-width: 280px) {
+      width: 100%;
+    }
+
 
     &_info {
       display: flex;
@@ -102,6 +158,9 @@
       flex-wrap: wrap;
       gap: 1.875rem;
       height: 12.5rem;
+      @media only screen and (max-width: 480px) {
+        height: auto;
+      }
     }
 
 
@@ -109,6 +168,11 @@
       display: flex;
       font-size: 1.5rem;
       padding: 0.625rem 0 1.875rem 0.625rem;
+      @media only screen and (max-width: 480px) {
+        font-size: 0.9375rem;
+        font-weight: bold;
+        justify-content: center;
+      }
     }
 
     &__block {
@@ -118,6 +182,19 @@
       max-height: 18.75rem;
       gap: 1.5rem;
       cursor: default;
+      @media only screen and (max-width: 480px) {
+        gap: 1rem;
+      }
+
+      & img:nth-last-child(even) {
+        width: 10%;
+      }
+
+      @media only screen and (max-width: 480px) {
+        font-size: 0.75rem;
+        flex-wrap: nowrap;
+      }
+
 
       &_green {
         color: green;
