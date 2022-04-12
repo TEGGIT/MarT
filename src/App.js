@@ -1,7 +1,7 @@
 import './App.css'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
+import Login from './components/Login/Login'
 import Contact from './components/Contact/Contact'
 import InfoPage from './components/InfoPage/InfoPage'
 import MainContent from './components/MainContent/MainContent'
@@ -22,6 +22,7 @@ const App = () => (
           <Route path="/numbers-page" element={<Numbers />} />
           <Route path="/info-page" element={<InfoPage />} />
           <Route path="/registration-page" element={<Registrations />} />
+          <Route path="/login-page" element={<Login/> } />
         </Routes>
       </BrowserRouter>
     </Provider>
