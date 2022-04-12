@@ -1,12 +1,43 @@
-.label {
-  display: flex;
-  flex-direction: column;
+.input__true {
+  font-size: 1rem;
+  padding: 15px 10px;
+  width: 100%;
+  border: 1px solid #8C8C8C;
+}
 
+.input__true:active, .input__true:hover, .input__true:focus {
+  border: 1px solid #8C8C8C;
+  outline: none;
+}
 
-  &__input {
-    padding: 5px 0;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-  }
+.input__block {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.input__name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.input__false {
+  font-size: 1rem;
+  padding: 15px 10px;
+  width: 100%;
+  border: 1px solid #CF4949;
+}
+
+.input__false:active, .input__false:hover, .input__false:focus {
+  border: 1px solid #CF4949;
+  outline: none;
+}
+
+.input__not__valid__text {
+  position: absolute;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(207, 73, 73, 1);
+  margin-top: 4px;
 }
