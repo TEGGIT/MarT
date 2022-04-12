@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Input from '../UI/Input/Input'
@@ -32,7 +33,10 @@ const Login = () => {
                   type="submit"
                   text="Войти"
               />
-
+              <div className={classes.container__form_borderText}>
+              <p>У вас нет учетной записи MarT? <NavLink to="/registration-page"><span
+                  className={classes.create}>Создайте!</span></NavLink></p>
+          </div>
             </form>
           </div>
         </main>
