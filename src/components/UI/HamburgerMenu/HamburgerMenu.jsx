@@ -36,7 +36,7 @@ const HamburgerMenu = ({header, active}) => (
               <NavLink to="/registration-page" className={classes.menu__link}>
                 <div className={classes.menu__link__container}>
                   <img src={account} alt="Регистрация"/>
-                  <p>Регистрация</p>
+                  <p>Регистрация/Войти</p>
                 </div>
               </NavLink>
             </div>

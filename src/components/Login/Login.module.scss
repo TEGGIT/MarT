@@ -1,0 +1,25 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 5rem;
+    background: #343434;
+    border-radius: 1.5625rem;
+ &__title{
+   display: flex;
+   justify-content: center;
+ }
+
+    &__form{
+      display: flex;
+      flex-direction: column;
+      gap: 1.4375rem;
+      margin-top: 1.25rem;
+      width: 22.813rem;
+    }
+  }
