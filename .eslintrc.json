@@ -56,6 +56,12 @@
         "props": false
       }
     ],
+    "import/no-mutable-exports": "off",
+    "prefer-const": "off",
+    "prefer-regex-literals": "off",
+    "dot-notation": "off",
+    "array-callback-return": "off",
+    "react/jsx-boolean-value": "off",
     "react/jsx-filename-extension": [
       1,
       {

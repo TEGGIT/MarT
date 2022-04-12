@@ -37,7 +37,7 @@ const Header = () => {
                 <p>Контакты</p>
               </div>
             </NavLink>
-            <NavLink to="/registration-page" className={classes.header__nav_link}>
+            <NavLink to="/login-page" className={classes.header__nav_link}>
               <div className={classes.header__nav__btns__container_gap}>
                 <img src={account} alt="Регистрация" />
                 <p>Регистрация/Войти</p>

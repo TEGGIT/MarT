@@ -3,6 +3,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.create{
+  font-weight: 700;
+  text-decoration: underline 2px;
+  color: rgb(141, 141, 141);
+}
   .container{
     display: flex;
     flex-direction: column;
@@ -21,5 +27,11 @@
       gap: 1.4375rem;
       margin-top: 1.25rem;
       width: 22.813rem;
+
+
+      &_borderText{
+        display: flex;
+        justify-content: center;
+      }
     }
   }
