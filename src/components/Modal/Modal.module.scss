@@ -9,6 +9,7 @@ input::-webkit-inner-spin-button {
 .switch {
   display: flex;
   align-items: center;
+
 }
 
 .background {
@@ -28,20 +29,72 @@ input::-webkit-inner-spin-button {
     border-radius: 1.25rem;
     background: rgba(255, 255, 255, 0.39);
     backdrop-filter: blur(8px);
-    box-shadow: -7px -7px 15px #4b4b4b,
-    7px 7px 15px #7b7b7b;
+    box-shadow: -0.4375rem -0.4375rem 0.9375rem #4b4b4b,
+    0.4375rem 0.4375rem 0.9375rem #7b7b7b;
+    @media only screen and (max-width: 480px) {
+      display: flex;
+      justify-content: center;
+      width: 85%;
+      padding: 1.5625rem;
+    }
+    @media only screen and (max-width: 376px) {
+      width: 85%;
+      height: 95%;
+    }
+    @media only screen and (max-width: 280px) {
+      width: 100%;
+    }
+
+
+    &__vertically {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      @media only screen and (max-width: 480px) {
+        flex-direction: column;
+      }
+      @media only screen and (max-width: 376px) {
+        justify-content: center;
+      }
+    }
+
 
     &__form {
       max-width: 360px;
       display: flex;
-      gap: 20px;
+      gap: 1.25rem;
       flex-direction: column;
+      @media only screen and (max-width: 480px) {
+        width: 85%;
+      }
+      @media only screen and (max-width: 376px) {
+        gap: 0.625rem;
+      }
+      @media only screen and (max-width: 280px) {
+        width: 75%;
+        gap: 0.9375rem;
+      }
+
+
+      &__topBtn {
+        @media only screen and (max-width: 480px) {
+          display: none;
+        }
+      }
+
+      &__bottomBtn {
+        @media not screen and (max-width: 480px) {
+          display: none;
+        }
+      }
 
 
       &_radio {
         display: flex;
-        gap: 15px;
+        gap: 0.9375rem;
         align-items: center;
+
       }
     }
 

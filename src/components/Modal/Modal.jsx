@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import DateRangePicker from '@mui/lab/DateRangePicker'
@@ -14,7 +14,7 @@ import Input from '../UI/Input/Input'
 import classes from './Modal.module.scss'
 import './muiStyles.scss'
 
-const Modal = ({ setOpenModal }) => {
+const Modal = ({setOpenModal}) => {
   const closeModal = () => setOpenModal(false)
 
   const [value, setValue] = React.useState(new Date('2020-01-01 24:00'))
@@ -30,9 +30,9 @@ const Modal = ({ setOpenModal }) => {
   const [dataBirthday, setDataBirthday] = useState('')
   const [visitDataBirthday, setVisitDataBirthday] = useState(false)
   const [errorDataBirthday, setErrorDataBirthday] = useState(
-    'Заполните дату рождения'
+      'Заполните дату рождения'
   )
-  const [hiddenInput, setHiddenInput] = useState({ display: 'none' })
+  const [hiddenInput, setHiddenInput] = useState({display: 'none'})
   const [checked, setChecked] = React.useState(false)
   const [valueData, setValueData] = React.useState([null, null])
   const [formValid, setFormValid] = useState(false)
@@ -55,8 +55,8 @@ const Modal = ({ setOpenModal }) => {
   const handleChange = (event) => {
     setChecked(event.target.checked)
     event.target.checked
-      ? setHiddenInput({ display: 'block', width: '18.75rem' })
-      : setHiddenInput({ display: 'none' })
+        ? setHiddenInput({display: 'block', width: '18.75rem'})
+        : setHiddenInput({display: 'none'})
   }
   const templateDate = (e) => {
     if (e.target.value.length === 2) {
@@ -137,134 +137,134 @@ const Modal = ({ setOpenModal }) => {
   }
 
   return (
-    <div className={classes.background} onClick={closeModal}>
-      <div
-        className={classes.background__card}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className={classes.background} onClick={closeModal}>
         <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '2rem',
-          }}
+            className={classes.background__card}
+            onClick={(e) => e.stopPropagation()}
         >
-          <form className={classes.background__card__form}>
-            <h2 className={classes.background__card_title}>
-              Регистрация номера
-            </h2>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <DateRangePicker
-                startText="Дата заезда"
-                endText="Дата выезда"
-                value={valueData}
-                onChange={(newValue) => validationData(newValue)}
-                renderInput={(startProps, endProps) => (
-                  <>
-                    <TextField {...startProps} color="success" />
-                    <Box sx={{ mx: 2 }}> до </Box>
-                    <TextField {...endProps} color="success" />
-                  </>
+          <div className={classes.background__card__vertically}>
+            <form className={classes.background__card__form}>
+              <h2 className={classes.background__card_title}>
+                Регистрация номера
+              </h2>
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <DateRangePicker
+                    startText="Дата заезда"
+                    endText="Дата выезда"
+                    value={valueData}
+                    onChange={(newValue) => validationData(newValue)}
+                    renderInput={(startProps, endProps) => (
+                        <>
+                          <TextField {...startProps} color="success"/>
+                          <Box sx={{mx: 2}}> до </Box>
+                          <TextField {...endProps} color="success"/>
+                        </>
+                    )}
+                />
+              </LocalizationProvider>
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <Stack spacing={3}>
+                  <TimePicker
+                      renderInput={(params) => <TextField {...params} />}
+                      value={value}
+                      label="Время заезда"
+                      onChange={(newValueTime) => validationTime(newValueTime)}
+                  />
+                  <TimePicker
+                      renderInput={(params) => <TextField {...params} />}
+                      value={value}
+                      label="Время выезда"
+                      onChange={(newValueTime) => validationTime(newValueTime)}
+                  />
+                </Stack>
+              </LocalizationProvider>
+              <div className={classes.switch}>
+                <Switch
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{'aria-label': 'controlled'}}
+                />
+                <p>Для другого человека</p>
+              </div>
+              <div className={classes.background__card__form__topBtn}>
+                <Button text="Бронировать" type="submit" disabled={!formValid}/>
+              </div>
+            </form>
+            <form className={classes.background__card__form}>
+              <div style={hiddenInput}>
+                <Input
+                    title="ФИО:"
+                    name="text"
+                    type="text"
+                    placeholder="Иванов Иван Иванович"
+                    onBlur={(e) => inputBlur(e)}
+                    onChange={(e) => fioValue(e)}
+                    value={fio}
+                />
+                {visitFio && fioError && (
+                    <div style={{color: 'red', position: 'absolute'}}>
+                      {fioError}
+                    </div>
                 )}
-              />
-            </LocalizationProvider>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-              <Stack spacing={3}>
-                <TimePicker
-                  renderInput={(params) => <TextField {...params} />}
-                  value={value}
-                  label="Время заезда"
-                  onChange={(newValueTime) => validationTime(newValueTime)}
+              </div>
+              <div style={hiddenInput}>
+                <Input
+                    onChange={(e) => emailValue(e)}
+                    onBlur={(e) => inputBlur(e)}
+                    title="Адрес электронной почты:"
+                    name="email"
+                    type="email"
+                    placeholder="ymenya.netprav32@gmail.com"
+                    value={email}
                 />
-                <TimePicker
-                  renderInput={(params) => <TextField {...params} />}
-                  value={value}
-                  label="Время выезда"
-                  onChange={(newValueTime) => validationTime(newValueTime)}
+                {visitEmail && emailError && (
+                    <div style={{color: 'red', position: 'absolute'}}>
+                      {emailError}
+                    </div>
+                )}
+              </div>
+              <div style={hiddenInput}>
+                <Input
+                    onKeyUp={(e) => templateDate(e)}
+                    onChange={(e) => dataBirthdayValue(e)}
+                    onBlur={(e) => inputBlur(e)}
+                    title="Дата рождения:"
+                    name="dataBirthday"
+                    type="data"
+                    placeholder="дд.мм.гггг"
+                    value={dataBirthday}
                 />
-              </Stack>
-            </LocalizationProvider>
-            <div className={classes.switch}>
-              <Switch
-                checked={checked}
-                onChange={handleChange}
-                inputProps={{ 'aria-label': 'controlled' }}
-              />
-              <p>Для другого человека</p>
-            </div>
-            <Button text="Бронировать" type="submit" disabled={!formValid} />
-          </form>
-          <form className={classes.background__card__form}>
-            <div style={hiddenInput}>
-              <Input
-                title="ФИО:"
-                name="text"
-                type="text"
-                placeholder="Иванов Иван Иванович"
-                onBlur={(e) => inputBlur(e)}
-                onChange={(e) => fioValue(e)}
-                value={fio}
-              />
-              {visitFio && fioError && (
-                <div style={{ color: 'red', position: 'absolute' }}>
-                  {fioError}
-                </div>
-              )}
-            </div>
-            <div style={hiddenInput}>
-              <Input
-                onChange={(e) => emailValue(e)}
-                onBlur={(e) => inputBlur(e)}
-                title="Адрес электронной почты:"
-                name="email"
-                type="email"
-                placeholder="ymenya.netprav32@gmail.com"
-                value={email}
-              />
-              {visitEmail && emailError && (
-                <div style={{ color: 'red', position: 'absolute' }}>
-                  {emailError}
-                </div>
-              )}
-            </div>
-            <div style={hiddenInput}>
-              <Input
-                onKeyUp={(e) => templateDate(e)}
-                onChange={(e) => dataBirthdayValue(e)}
-                onBlur={(e) => inputBlur(e)}
-                title="Дата рождения:"
-                name="dataBirthday"
-                type="data"
-                placeholder="дд.мм.гггг"
-                value={dataBirthday}
-              />
-              {visitDataBirthday && errorDataBirthday && (
-                <div style={{ color: 'red', position: 'absolute' }}>
-                  {errorDataBirthday}
-                </div>
-              )}
-            </div>
-            <div style={hiddenInput}>
-              <Input
-                onChange={(e) => phoneValue(e)}
-                onBlur={(e) => inputBlur(e)}
-                title="Номер телефона:"
-                name="phone"
-                type="number"
-                value={phone}
-                placeholder="+79999999999"
-              />
-              {visitPhone && phoneError && (
-                <div style={{ color: 'red', position: 'absolute' }}>
-                  {phoneError}
-                </div>
-              )}
-            </div>
-          </form>
+                {visitDataBirthday && errorDataBirthday && (
+                    <div style={{color: 'red', position: 'absolute'}}>
+                      {errorDataBirthday}
+                    </div>
+                )}
+              </div>
+              <div style={hiddenInput}>
+                <Input
+                    onChange={(e) => phoneValue(e)}
+                    onBlur={(e) => inputBlur(e)}
+                    title="Номер телефона:"
+                    name="phone"
+                    type="number"
+                    value={phone}
+                    placeholder="+79999999999"
+                />
+                {visitPhone && phoneError && (
+                    <div style={{color: 'red', position: 'absolute'}}>
+                      {phoneError}
+                    </div>
+                )}
+              </div>
+
+              <div className={classes.background__card__form__bottomBtn}>
+                <Button text="Бронировать" type="submit" disabled={!formValid}/>
+              </div>
+            </form>
+          </div
+          >
         </div>
       </div>
-    </div>
   )
 }
 

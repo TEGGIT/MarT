@@ -60,6 +60,14 @@
           @media only screen and (max-width: 480px) {
             font-size: 2rem;
           }
+          @media only screen and (max-width: 380px) {
+            font-size: 1.875rem;
+          }
+          @media only screen and (max-width: 280px) {
+            font-size: 1.25rem;
+          }
+
+
 
 
           &_green {
@@ -103,6 +111,9 @@
             @media only screen and (max-width: 480px) {
               font-size: 2.5rem;
             }
+            @media only screen and (max-width: 280px) {
+              font-size: 1.5rem;
+            }
 
 
             &_color {
@@ -111,9 +122,12 @@
           }
 
           &_main {
-            font-size: 31px;
+            font-size: 1.9375rem;
             @media only screen and (max-width: 480px) {
               font-size: 1.5rem;
+            }
+            @media only screen and (max-width: 280px) {
+              font-size: 0.9375rem;
             }
           }
         }

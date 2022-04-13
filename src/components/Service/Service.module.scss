@@ -6,20 +6,32 @@
   align-items: center;
   font-size: 5rem;
   color: white;
+  @media only screen and (max-width: 480px) {
+    height: auto;
+    padding: 1.5625rem;
+  }
+
 
   &__title {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100px 23px;
+    border-radius: 6.25rem 1.4375rem;
     background: rgba(136, 136, 136, 0.5);
     width: 37.5rem;
+    @media only screen and (max-width: 480px) {
+      font-size: 2rem;
+      width: 20rem;
+    }
+    @media only screen and (max-width: 280px) {
+        font-size: 1.5rem;
+    }
   }
 }
 
 .content {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   display: flex;
   justify-content: center;
 
@@ -31,27 +43,48 @@
 
     &__conteiner {
       width: 900px;
-      gap: 60px;
+      gap: 3.75rem;
       display: flex;
       justify-content: center;
       color: white;
-      margin-bottom: 120px;
+      margin-bottom: 7.5rem;
+
+      @media only screen and (max-width: 480px) {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: auto;
+        padding: 0 1.25rem;
+      }
+
+      & img {
+        @media only screen and (max-width: 480px) {
+          width: 80%;
+        }
+      }
 
 
       &_revers {
-        gap: 60px;
+        gap: 3.75rem;
         display: flex;
         flex-direction: row-reverse;
+        @media only screen and (max-width: 480px) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
       }
 
       &_text {
         font-size: 1.875rem;
+        @media only screen and (max-width: 480px) {
+          font-size: 1.5rem;
+        }
       }
+
 
 
       &_text h3 {
         color: #83B888;
-        padding-bottom: 20px;
+        padding-bottom: 1.25rem;
       }
 
     }
