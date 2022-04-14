@@ -23,6 +23,14 @@ export let signinData = {
     value: "",
     isValid: false,
   },
+  number: {
+    value: "",
+    isValid: false,
+  },
+  date:{
+    value: "",
+    isValid: false,
+  },
 };
 
 export let loginData = {

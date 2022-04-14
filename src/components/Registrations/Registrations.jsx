@@ -26,6 +26,8 @@ const Registrations = () => {
         FIO: formState.FIO.value,
         email: formState.email.value,
         password: formState.password.value,
+        date: formState.date.value,
+        number: formState.number.value,
       };
       usersStorage.push(newUser);
       localStorage.setItem("USERS_DATA", JSON.stringify(usersStorage));
@@ -65,6 +67,7 @@ const Registrations = () => {
                   name="FIO"
                   type="text"
                   notValidText="Введите ФИО"
+                  placeholder="Иванов Иван Иванович"
                   inputValue={inputValue}
                   setInputValue={setInputValue}
                   formState={formState}
@@ -75,6 +78,7 @@ const Registrations = () => {
                   text="Адресс электронной почты"
                   name="email"
                   type="email"
+                  placeholder="supermegapochta03@gmail.com"
                   notValidText="Введите адресс электронной почты"
                   inputValue={inputValue}
                   setInputValue={setInputValue}
@@ -82,10 +86,33 @@ const Registrations = () => {
                   setFormState={setFormState}
               />
               <Input
-                  text="Password"
+                  text="Пароль"
                   name="password"
                   type="password"
                   notValidText="Введите пароль"
+                  placeholder="abcd123_$"
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                  formState={formState}
+                  setFormState={setFormState}
+              />
+              <Input
+                  text="Дата рождения"
+                  name="date"
+                  type="text"
+                  notValidText="Введите дату рождения"
+                  placeholder="26.07.2003"
+                  inputValue={inputValue}
+                  setInputValue={setInputValue}
+                  formState={formState}
+                  setFormState={setFormState}
+              />
+              <Input
+                  text="Номер телефона"
+                  name="number"
+                  type="number"
+                  notValidText="Введите номер телефона"
+                  placeholder="89289933939"
                   inputValue={inputValue}
                   setInputValue={setInputValue}
                   formState={formState}

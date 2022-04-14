@@ -15,39 +15,75 @@ const Header = () => {
   return (
       <header className={classes.header}>
         <nav className={classes.header__nav}>
-          <NavLink to="/main-page" className={classes.header__nav_link}>
-            <img src={logo} alt={logo}/>
-          </NavLink>
-          <div className={classes.header__nav__btns__container}>
-            <NavLink to="/numbers-page" className={classes.header__nav_link}>
-              <div className={classes.header__nav__btns__container_gap}>
-                <img src={iconN} alt="номера" />
-                <p>Номера</p>
-              </div>
-            </NavLink>
-            <NavLink to="/sosi" className={classes.header__nav_link}>
-              <div className={classes.header__nav__btns__container_gap}>
-                <img src={iconA} alt="Услуги" />
-                <p>Услуги</p>
-              </div>
-            </NavLink>
-            <NavLink to="/contact-page" className={classes.header__nav_link}>
-              <div className={classes.header__nav__btns__container_gap}>
-                <img src={iconP} alt="Контакты" />
-                <p>Контакты</p>
-              </div>
-            </NavLink>
-            <NavLink to="/login-page" className={classes.header__nav_link}>
-              <div className={classes.header__nav__btns__container_gap}>
-                <img src={account} alt="Регистрация" />
-                <p>Регистрация/Войти</p>
-              </div>
-            </NavLink>
-          </div>
+          {!localStorage.LOGIN_USER ? (<>
+                <NavLink to="/main-page" className={classes.header__nav_link}>
+                  <img src={logo} alt={logo}/>
+                </NavLink>
+                <NavLink to="/numbers-page" className={classes.header__nav_link}>
+                  <div className={classes.header__nav__btns__container_gap}>
+                    <img src={iconN} alt="номера"/>
+                    <p>Номера</p>
+                  </div>
+                </NavLink>
+                <NavLink to="/sosi" className={classes.header__nav_link}>
+                  <div className={classes.header__nav__btns__container_gap}>
+                    <img src={iconA} alt="Услуги"/>
+                    <p>Услуги</p>
+                  </div>
+                </NavLink>
+                <NavLink to="/contact-page" className={classes.header__nav_link}>
+                  <div className={classes.header__nav__btns__container_gap}>
+                    <img src={iconP} alt="Контакты"/>
+                    <p>Контакты</p>
+                  </div>
+                </NavLink>
+                <NavLink to="/login-page" className={classes.header__nav_link}>
+                  <div className={classes.header__nav__btns__container_gap}>
+                    <img src={account} alt="Регистрация"/>
+                    <p>Регистрация/Войти</p>
+                  </div>
+                </NavLink>
 
-          <div className={classes.header__nav__burgerBtn} onClick={() => setMenuActive(!menuActive)}>
-            <span/>
-          </div>
+
+              </>
+
+          ) : (<>
+                <NavLink to="/main-page" className={classes.header__nav_link}>
+                  <img src={logo} alt={logo}/>
+                </NavLink>
+                <div className={classes.header__nav__btns__container}>
+                  <NavLink to="/numbers-page" className={classes.header__nav_link}>
+                    <div className={classes.header__nav__btns__container_gap}>
+                      <img src={iconN} alt="номера"/>
+                      <p>Номера</p>
+                    </div>
+                  </NavLink>
+                  <NavLink to="/sosi" className={classes.header__nav_link}>
+                    <div className={classes.header__nav__btns__container_gap}>
+                      <img src={iconA} alt="Услуги"/>
+                      <p>Услуги</p>
+                    </div>
+                  </NavLink>
+                  <NavLink to="/contact-page" className={classes.header__nav_link}>
+                    <div className={classes.header__nav__btns__container_gap}>
+                      <img src={iconP} alt="Контакты"/>
+                      <p>Контакты</p>
+                    </div>
+                  </NavLink>
+                  <NavLink to="/login-page" className={classes.header__nav_link}
+                           onClick={() => localStorage.removeItem("LOGIN_USER")}>
+                    <div className={classes.header__nav__btns__container_gap}>
+                      <img src={account} alt="Регистрация"/>
+                      <p>Выйти</p>
+                    </div>
+                  </NavLink>
+                </div>
+
+
+                <div className={classes.header__nav__burgerBtn} onClick={() => setMenuActive(!menuActive)}>
+                  <span/>
+                </div>
+              </>)}
         </nav>
         <HamburgerMenu active={menuActive} setActive={setMenuActive} header='Меню навигации'/>
       </header>
