@@ -1,20 +1,44 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Input from '../UI/Input/Input'
 import classes from './Login.module.scss'
 import Button from "../UI/Button/Button";
-import {signinData} from "../../appConstants";
+import {loginData} from "../../appConstants";
 
 
 const Login = () => {
-  const [usersStorage, setUsersStorage] = useState([]);
+  const [formState, setFormState] = useState(loginData);
   const [isDisableBtn, setIsDisableBtn] = useState(true);
   const [inputValue, setInputValue] = useState("");
-  const [formState, setFormState] = useState(signinData);
+  const usersStorage = JSON.parse(localStorage.getItem("USERS_DATA"));
   const navigate = useNavigate();
   const validState = [];
+
+
+  const clickLoginBth = (e) => {
+    e.preventDefault();
+    const thisUser = usersStorage.find(
+        (item) => item.email === formState.email.value
+    );
+    if (thisUser && formState.password.value === thisUser.password) {
+      localStorage.setItem("LOGIN_USER", JSON.stringify(thisUser));
+      navigate("/main-page", { replace: true });
+    } else {
+      e.preventDefault();
+    }
+  };
+
+  useEffect(() => {
+    Object.keys(formState).map((i) => {
+      validState.push(formState[i].isValid);
+    });
+    Object.keys(validState).map((i) => {
+      if (validState.filter((state) => !state).length) setIsDisableBtn(true);
+      else setIsDisableBtn(false);
+    });
+  }, [validState, formState]);
   return (
       <>
         <Header/>
@@ -29,6 +53,7 @@ const Login = () => {
                   text="Адресс электронной почты"
                   name="email"
                   type="email"
+                  placeholder="supermegapochta03@gmail.com"
                   notValidText="Введите адресс электронной почты"
                   inputValue={inputValue}
                   setInputValue={setInputValue}
@@ -36,10 +61,11 @@ const Login = () => {
                   setFormState={setFormState}
               />
               <Input
-                  text="Password"
+                  text="Пароль"
                   name="password"
                   type="password"
                   notValidText="Введите пароль"
+                  placeholder="abcd123_$"
                   inputValue={inputValue}
                   setInputValue={setInputValue}
                   formState={formState}
@@ -48,6 +74,10 @@ const Login = () => {
               <Button
                   type="submit"
                   text="Войти"
+                  onClick={(e) => {
+                    clickLoginBth(e);
+                  }}
+                  isDisable={isDisableBtn}
               />
               <div className={classes.container__form_borderText}>
               <p>У вас нет учетной записи MarT? <NavLink to="/registration-page"><span
