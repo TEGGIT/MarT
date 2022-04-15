@@ -42,4 +42,26 @@ export let loginData = {
     value: "",
     isValid: false,
   },
+
+};
+
+export let guestData = {
+  FIO: {
+    value: "",
+    isValid: false,
+  },
+
+  email: {
+    value: "",
+    isValid: false,
+  },
+  number: {
+    value: "",
+    isValid: false,
+  },
+  date:{
+    value: "",
+    isValid: false,
+  },
+
 };
