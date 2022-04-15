@@ -10,6 +10,7 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import Modal from '../Modal/Modal'
 import classes from './InfoPage.module.scss'
+import ModalError from "../Modal/ModalError";
 
 const InfoPage = () => {
   const location = useLocation()
@@ -18,6 +19,7 @@ const InfoPage = () => {
     allNumbers.find((number) => location.hash === `#${number.id}`)
   )
   const [openModal, setOpenModal] = useState(false)
+  const [openModalError, setOpenModalError] = useState(false)
   const [servicesState, setServicesState] = useState({
     breakfast: false,
     bar: false,
@@ -69,15 +71,30 @@ const InfoPage = () => {
                   >
                     <span>{thisNumber.price} ₽/сутки</span>
                   </div>
-                  <button
-                    type="button"
-                    className={
-                      classes.container__hotelCard__bottomInfo_info_btn
-                    }
-                    onClick={() => setOpenModal(true)}
-                  >
-                    Броннировать
-                  </button>
+                  {!localStorage.LOGIN_USER ?(
+
+                      <button
+                          type="button"
+                          className={
+                            classes.container__hotelCard__bottomInfo_info_btn_false
+                          }
+                          onClick={() => setOpenModalError(true)}
+                      >
+                        Бронировать
+                      </button>
+                  ):(
+                      <button
+                          type="button"
+                          className={
+                            classes.container__hotelCard__bottomInfo_info_btn
+                          }
+                          onClick={() => setOpenModal(true)}
+                      >
+                        Бронировать
+                      </button>
+
+                  )}
+
                 </div>
               </div>
             </div>
@@ -111,6 +128,7 @@ const InfoPage = () => {
             </div>
           </div>
         </div>
+        {openModalError && <ModalError setOpenModalError={setOpenModalError} />}
         {openModal && <Modal setOpenModal={setOpenModal} />}
       </main>
       <Footer />

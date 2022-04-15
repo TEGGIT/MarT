@@ -62,6 +62,7 @@
     "dot-notation": "off",
     "array-callback-return": "off",
     "react/jsx-boolean-value": "off",
+    "import/named": "off",
     "react/jsx-filename-extension": [
       1,
       {

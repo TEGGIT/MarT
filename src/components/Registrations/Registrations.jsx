@@ -121,7 +121,7 @@ const Registrations = () => {
               <Button
                   text="Зарегистрироваться"
                   name="Create account"
-                  isDisable={isDisableBtn}
+                  disabled={isDisableBtn}
                   onClick={(e) => submitForm(e)}
               />
             </form>

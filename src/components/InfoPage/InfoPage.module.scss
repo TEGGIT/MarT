@@ -99,10 +99,23 @@
             justify-content: center;
           }
         }
+        &_btn_false{
+          background: #585858;
+          border: none;
+          padding: 0.9375rem 5rem;
+          color: white;
+          font-size: 1.5rem;
+          border-radius: 1.5625rem 0;
+        }
 
         &_btn:hover {
           transition: 0.5s;
           background: #b7b7b7;
+          color: black;
+        }
+        &_btn_false:hover{
+          transition: 0.5s;
+          background: #ff0008;
           color: black;
         }
       }

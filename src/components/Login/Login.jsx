@@ -77,7 +77,7 @@ const Login = () => {
                   onClick={(e) => {
                     clickLoginBth(e);
                   }}
-                  isDisable={isDisableBtn}
+                  disabled={isDisableBtn}
               />
               <div className={classes.container__form_borderText}>
               <p>У вас нет учетной записи MarT? <NavLink to="/registration-page"><span
